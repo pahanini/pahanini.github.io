@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pahanini.github.io</title>
+    <link>https://pahanini.github.io/</link>
+    <description>Recent content on pahanini.github.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 04 Sep 2021 13:37:24 +0500</lastBuildDate><atom:link href="https://pahanini.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как прошить стик ZigBee CC2531 MacOS BigSur</title>
+      <link>https://pahanini.github.io/posts/zigbee-flashing-cc2531/</link>
+      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
+      
+      <guid>https://pahanini.github.io/posts/zigbee-flashing-cc2531/</guid>
+      <description>&lt;p&gt;Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн</title>
+      <link>https://pahanini.github.io/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/</link>
+      <pubDate>Thu, 26 Aug 2021 15:29:30 +0500</pubDate>
+      
+      <guid>https://pahanini.github.io/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/</guid>
+      <description>Прочитал книгу &amp;ldquo;Предметно-ориентированное проектирование&amp;rdquo; (ПОП), Скотт Миллетт, Ник Тюн. Как и во всей литературе подобного рода очень много &amp;ldquo;воды&amp;rdquo;. Попытаюсь кратко изложить содержание книги.
+Предметно ориентированный подход это философия проектирования программного обеспечения (ПО). Это набор приемов и хороших практик которые позволят получить поддерживаемый продукт с наименьшей сложностью на выходе. Это не набор шаблонов и не фреймворк.
+Предметная область - деятельность для которой создаётся софт (ecom, банковская деятельность, медицина). Предметную область следует разделить на подобласти:</description>
+    </item>
+    
+  </channel>
+</rss>
