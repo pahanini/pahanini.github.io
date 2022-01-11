@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on pahanini.github.io</title>
-    <link>https://pahanini.github.io/categories/</link>
-    <description>Recent content in Categories on pahanini.github.io</description>
+    <title>Categories on pahanini.com</title>
+    <link>https://pahanini.com/categories/</link>
+    <description>Recent content in Categories on pahanini.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ru-ru</language><atom:link href="https://pahanini.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ru-ru</language><atom:link href="https://pahanini.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
