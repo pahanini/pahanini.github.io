@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pahanini.com</title>
-    <link>https://pahanini.com/</link>
-    <description>Recent content on pahanini.com</description>
+    <title>Предметно-ориентированное проектирование on pahanini.com</title>
+    <link>https://pahanini.com/tags/ddd/</link>
+    <description>Recent content in Предметно-ориентированное проектирование on pahanini.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 10 Feb 2022 08:53:59 +0500</lastBuildDate><atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 08:53:59 +0500</lastBuildDate><atom:link href="https://pahanini.com/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Обзор первой части книги. Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн. </title>
       <link>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/</link>
@@ -29,15 +29,6 @@
 &lt;p&gt;Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
 под разными углами.&lt;/p&gt;
 &lt;p&gt;Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Как прошить стик ZigBee CC2531 MacOS BigSur</title>
-      <link>https://pahanini.com/posts/zigbee-flashing-cc2531/</link>
-      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
-      
-      <guid>https://pahanini.com/posts/zigbee-flashing-cc2531/</guid>
-      <description>&lt;p&gt;Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -7,7 +7,7 @@
     <title>Как прошить стик ZigBee CC2531 MacOS BigSur | pahanini.com</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.">
-    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="generator" content="Hugo 0.92.1" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -37,7 +37,7 @@
 <meta itemprop="description" content="Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто."><meta itemprop="datePublished" content="2021-09-04T13:37:24+05:00" />
 <meta itemprop="dateModified" content="2021-09-04T13:37:24+05:00" />
 <meta itemprop="wordCount" content="158">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ZigBee,CC2531," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Как прошить стик ZigBee CC2531 MacOS BigSur"/>
 <meta name="twitter:description" content="Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто."/>
 
@@ -113,7 +113,7 @@
 
 
 
-      <h1 class="f1 athelas mt3 mb1">Как прошить стик ZigBee CC2531 MacOS BigSur</h1>
+      
       
       
       <time class="f6 mv4 dib tracked" datetime="2021-09-04T13:37:24+05:00">September 4, 2021</time>
@@ -122,12 +122,12 @@
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.</p>
-<p>Сам Процесс прошивки подробно описан на здесь <a href="https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html,">https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html,</a> однако инструкции для MacOS в 2021 году уже не актуальны. При попытке выполнить команду <code>.configure</code> получаем ошибку</p>
-<pre><code>checking for the Boost regex library... no
+<p>Сам Процесс прошивки подробно описан на здесь <a href="https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html">https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html</a>, однако инструкции для MacOS в 2021 году уже не актуальны. При попытке выполнить команду <code>.configure</code> получаем ошибку</p>
+<pre tabindex="0"><code>checking for the Boost regex library... no
 configure: error: cannot find the flags to link with Boost regex
 </code></pre><p>Соответствующий issue есть на github <a href="https://github.com/dashesy/cc-tool/issues/25">https://github.com/dashesy/cc-tool/issues/25</a>. Предложенный способ решения это установка boost 1.60 вместо 1.76 на данный момент не работает так как формула boost 1.60 удалена из homebrew.</p>
 <p>Очень долго искал решение, пробовал собрать boost 1.60, использовать докер. В итоге нашел решение  <a href="https://gist.github.com/kidpixo/ef1a26ae953e3939a4eebe1b6fd2f07c">здесь</a>. С данными флагами cc-tool собирается на MacOS.</p>
-<pre><code>CC=/usr/bin/clang \
+<pre tabindex="0"><code>CC=/usr/bin/clang \
 CXX=/usr/bin/clang++ \
 CPPFLAGS=-I/usr/local/include \
 LDFLAGS=-I/usr/local/include \
@@ -144,6 +144,14 @@ LIBUSB_LIBS=&quot;-L/usr/local/lib -lusb-1.0&quot; \
 
 make clean ; make
 </code></pre><p>Может кому и пригодится. Если есть решение лучше прошу написать в <a href="https://github.com/dashesy/cc-tool/issues/25">issue</a>.</p><ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/zigbee" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">ZigBee</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/cc2531" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">CC2531</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">

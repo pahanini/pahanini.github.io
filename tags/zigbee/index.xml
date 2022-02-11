@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZigBee on pahanini.com</title>
+    <link>https://pahanini.com/tags/zigbee/</link>
+    <description>Recent content in ZigBee on pahanini.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 04 Sep 2021 13:37:24 +0500</lastBuildDate><atom:link href="https://pahanini.com/tags/zigbee/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как прошить стик ZigBee CC2531 MacOS BigSur</title>
+      <link>https://pahanini.com/posts/zigbee-flashing-cc2531/</link>
+      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
+      
+      <guid>https://pahanini.com/posts/zigbee-flashing-cc2531/</guid>
+      <description>&lt;p&gt;Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
