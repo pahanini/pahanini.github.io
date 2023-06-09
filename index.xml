@@ -6,7 +6,16 @@
     <description>Recent content on pahanini.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 10 Feb 2022 08:53:59 +0500</lastBuildDate><atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 May 2023 09:45:30 +0500</lastBuildDate><atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как установить ntfs-3g на macOS Ventura</title>
+      <link>https://pahanini.com/posts/install-ntfs-3g-mac-os-ventura/</link>
+      <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
+      
+      <guid>https://pahanini.com/posts/install-ntfs-3g-mac-os-ventura/</guid>
+      <description>&lt;p&gt;К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &amp;lsquo;Filesystem is dirty&amp;rsquo;.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Обзор первой части книги. Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн.</title>
       <link>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/</link>
