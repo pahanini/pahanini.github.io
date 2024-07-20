@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Предметно-ориентированное проектирование on pahanini.com - записная книжка</title>
+    <link>https://pahanini.com/posts/tags/ddd/</link>
+    <description>Recent content in Предметно-ориентированное проектирование on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <atom:link href="https://pahanini.com/posts/tags/ddd/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

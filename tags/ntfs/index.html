@@ -1,48 +1,560 @@
 <!DOCTYPE html>
-<html lang="ru-ru">
+<html lang="ru-ru"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>NTFS | pahanini.com</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="generator" content="Hugo 0.110.0">
-    
-    
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTFS | pahanini.com - записная книжка</title>
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 
 
 
+<meta name="author" content="pahanini" />
+<meta name="description" content="Записная книжка" />
+
+
+<link rel="canonical" href="https://pahanini.com/tags/ntfs/" />
+
+
+<meta property="og:url" content="https://pahanini.com/tags/ntfs/">
+  <meta property="og:site_name" content="pahanini.com - записная книжка">
+  <meta property="og:title" content="NTFS">
+  <meta property="og:description" content="Записная книжка">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pahanini.com/me/background.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pahanini.com/me/background.jpg">
+  <meta name="twitter:title" content="NTFS">
+  <meta name="twitter:description" content="Записная книжка">
+
+
+
+<meta name="generator" content="Hugo 0.129.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+     
+
     
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 pt-4 pb-4"
+  :class="{ 'transition bg-base-100 shadow-xl dark:border-b dark:border-base-content/30': isSticky }">
+
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Повернуть!">
+        <div class="h-10 rounded-full">
+          <img src="/me/ava.jpg" alt="pahanini" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://pahanini.com/" class="text-lg font-semibold cursor-pointer">
+          pahanini
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Drink coffee. Do stupid things faster with more energy.</div>
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square">
+        <ion-icon name="menu-outline" size="large"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Поиск">
+    <ion-icon name="search"></ion-icon>
+    Поиск
+  </a>
+</li>
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
+    <ion-icon name="archive"></ion-icon>
+    Архивы
+  </a>
+</li>
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="Все категории">
+    <ion-icon name="grid"></ion-icon>
+    Все категории
+  </a>
+</li>
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
+    <ion-icon name="pricetags"></ion-icon>
+    Все теги
+  </a>
+</li>
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+      
       
 
-    
-
-    
-    
-      <link href="/tags/ntfs/index.xml" rel="alternate" type="application/rss+xml" title="pahanini.com" />
-      <link href="/tags/ntfs/index.xml" rel="feed" type="application/rss+xml" title="pahanini.com" />
       
-    
-    
-    <meta property="og:title" content="NTFS" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pahanini.com/tags/ntfs/" />
-<meta itemprop="name" content="NTFS">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="NTFS"/>
-<meta name="twitter:description" content=""/>
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+        <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+      </a>
+      
 
       
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+        <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+        <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+        <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+        <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+      </a>
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <section class="front">
+          <div class="container">
+            
+
+<div class="flex flex-col md:flex-row gap-4 mt-8 lg:mt-12 px-4">
+  <div class="md:basis-[200px] lg:basis-[300px] prose dark:prose-invert">
+    <h1 class="text-2xl">NTFS</h1>
+    <p class="text-sm">1 статья</p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      
+      
+      
+
+      
+
+      
+      
+      
+
+      
+      
+      <a href="/tags/cc2531/" class="badge h-6 no-underline hover:badge-primary">
+        CC2531
+      </a>
+      
+      
+      
+      <a href="/tags/cctool/" class="badge h-6 no-underline hover:badge-primary">
+        Cctool
+      </a>
+      
+      
+      
+      <a href="/tags/context/" class="badge h-6 no-underline hover:badge-primary">
+        Context
+      </a>
+      
+      
+      
+      <a href="/tags/ddd/" class="badge h-6 no-underline hover:badge-primary">
+        DDD
+      </a>
+      
+      
+      
+      <a href="/tags/golang/" class="badge h-6 no-underline hover:badge-primary">
+        Golang
+      </a>
+      
+      
+      
+      <a href="/tags/keenetic/" class="badge h-6 no-underline hover:badge-primary">
+        Keenetic
+      </a>
+      
+      
+      
+      <a href="/tags/macos/" class="badge h-6 no-underline hover:badge-primary">
+        MacOS
+      </a>
+      
+      
+      
+      <a href="/tags/mqtt/" class="badge h-6 no-underline hover:badge-primary">
+        Mqtt
+      </a>
+      
+      
+      
+      <span class="badge h-6 badge-primary">
+        NTFS
+      </span>
+      
+      
+      
+      <a href="/tags/zigbee/" class="badge h-6 no-underline hover:badge-primary">
+        ZigBee
+      </a>
+      
+      
+      
+      <a href="/tags/zoom/" class="badge h-6 no-underline hover:badge-primary">
+        Zoom
+      </a>
+      
+      
+    </div>
+  </div>
+  <div class="divider divider-vertical md:divider-horizontal"></div>
+  <div class="flex-1 space-y-4">
     
-	
+    
+    <a class="card image-full card-compact" href="/posts/install-ntfs-mac-os-ventura/">
+  <figure class="h-[200px]">
+  
+    
+    
+    <picture class="w-full">
+      <source srcset="/posts/install-ntfs-mac-os-ventura/upsharski_hu64c36a0dd9fb5073911b2b3805981fa2_2422647_4032x3024_resize_q75_h2_box.webp" type="image/webp" />
+      <img class="w-full" src="/posts/install-ntfs-mac-os-ventura/upsharski.jpg" alt="upsharski.jpg" />
+    </picture>
+    
+  
+  </figure>
+
+  <div class="card-body">
+    <h2 class="card-title">Как установить ntfs-3g на macOS Ventura</h2>
+
+    <p class="date">
+    
+      <span data-format="luxon">2023-05-16T09:45:30&#43;05:00</span>
+    
+    </p>
+
+    <p>К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &lsquo;Filesystem is dirty&rsquo;.</p>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span>
+  
+    pahanini
+  
+  </span>
+</div>
+
+
+      <div class="inline-flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>1 минута чтения</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+    
+
+    <div class="flex justify-center pt-8">
+      <div class="join grid grid-cols-2">
+  
+  <button class="join-item btn btn-outline btn-sm" disabled>
+    Предыдущая
+  </button>
+  
+  
+  <button class="join-item btn btn-outline btn-sm" disabled>
+    Следующая
+  </button>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>
+    © 2022 - 2024 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </section>
+        <section class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">О себе</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru">sima-land.ru</a></p>
+<p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
+код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
+<p>Еще у меня много разных хобби не связанных с ИТ.</p>
+<p>Этот сайт я использую как записную книжку. Может
+эта информация будет полезна кому-то еще.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Фото</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Все фото на сайте мои и чаще никак не связаны с темой статьи.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Лицензия（Creative Commons）</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Контент сайта лицензирован <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p>All contents of this website are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Социальные сети</div>
+
+        <ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:pahanini@gmail.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/pahanini" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://x.com/pahanini" target="_blank" title="X">
+      <ion-icon name="logo-x"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://instagram.com/pahanini" target="_blank" title="Instagram">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://stackoverflow.com/users/4695479/pavel-tetyaev" target="_blank" title="stack overflow">
+      <ion-icon name="logo-stackoverflow"></ion-icon>
+    </a>
+  </li>
+  
+</ul>
+
+      </div>
+    </article>
+  </div>
+  
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
@@ -59,111 +571,35 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
 
-  </head>
+    
 
-  <body class="ma0 avenir bg-near-white">
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "ru" }).toFormat("yyyy.MM.dd")
+    })
+  }
+</script>
+
+
+
+
 
     
 
-  
-  
-  <header class="cover bg-top" style="background-image: url('https://pahanini.com/images/cat-and-hamburger.jpg');">
-    <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        pahanini.com
-      
-    </a>
-    <div class="flex-l items-center">
-      
+    
 
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-  </div>
-</nav>
-
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          NTFS
-        </h1>
-        
-      </div>
-    </div>
-  </header>
-
-
-    <main class="pb7" role="main">
-      
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “NTFS”</p>
-    </div>
-  </article>
-  <div class="mw8 center">    
-    <section class="flex-ns flex-wrap justify-around mt5">
-      
-        <div class="relative w-100  mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="/posts/install-ntfs-3g-mac-os-ventura/" class="link black dim">
-        Как установить ntfs-3g на macOS Ventura
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <p>К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &lsquo;Filesystem is dirty&rsquo;.</p>
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-    </section>
-  </div>
-
-    </main>
-    <footer class="pink bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://pahanini.com/" >
-    &copy;  pahanini.com 2023 
-  </a>
-    <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-  </div>
-</footer>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

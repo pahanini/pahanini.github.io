@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pahanini.com</title>
+    <title>pahanini.com - записная книжка</title>
     <link>https://pahanini.com/</link>
-    <description>Recent content on pahanini.com</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Tue, 16 May 2023 09:45:30 +0500</lastBuildDate><atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zoom Bingo</title>
+      <link>https://pahanini.com/posts/zoom-bingo/</link>
+      <pubDate>Fri, 19 Jul 2024 11:23:54 +0500</pubDate>
+      <guid>https://pahanini.com/posts/zoom-bingo/</guid>
+      <description>&lt;p&gt;Как развлечь себя на скучной рекламной встрече в зум.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golang context для чайников</title>
+      <link>https://pahanini.com/posts/go-context/</link>
+      <pubDate>Sat, 07 Oct 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/go-context/</guid>
+      <description>&lt;p&gt;Это кусок курса по go, который я преподавал когда-то давно.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Как установить ntfs-3g на macOS Ventura</title>
-      <link>https://pahanini.com/posts/install-ntfs-3g-mac-os-ventura/</link>
+      <link>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</link>
       <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
-      
-      <guid>https://pahanini.com/posts/install-ntfs-3g-mac-os-ventura/</guid>
+      <guid>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</guid>
       <description>&lt;p&gt;К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &amp;lsquo;Filesystem is dirty&amp;rsquo;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Обзор первой части книги. Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн.</title>
       <link>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/</link>
       <pubDate>Thu, 10 Feb 2022 08:53:59 +0500</pubDate>
-      
       <guid>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/</guid>
-      <description>&lt;h2 id=&#34;часть-1-принципы-и-приемы-предметно-ориентированного-проектирования&#34;&gt;Часть 1. Принципы и приемы предметно ориентированного проектирования.&lt;/h2&gt;
-&lt;h3 id=&#34;1-что-такое-предметно-ориентированное-проектирование&#34;&gt;1. Что такое предметно ориентированное проектирование?&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Предметно ориентированный подход&lt;/strong&gt; это &lt;em&gt;философия&lt;/em&gt; проектирования программного обеспечения (ПО). Это набор приемов и хороших
-практик которые позволят получить поддерживаемый продукт с наименьшей сложностью на выходе. Это не набор шаблонов и не фреймворк.&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;часть-1-принципы-и-приемы-предметно-ориентированного-проектирования&#34;&gt;Часть 1. Принципы и приемы предметно ориентированного проектирования.&lt;/h2&gt;</description>
     </item>
-    
     <item>
       <title>Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн</title>
       <link>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/</link>
       <pubDate>Wed, 09 Feb 2022 08:53:59 +0500</pubDate>
-      
       <guid>https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/</guid>
-      <description>&lt;p&gt;Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.&lt;/p&gt;
-&lt;p&gt;Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
-под разными углами.&lt;/p&gt;
-&lt;p&gt;Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Как прошить стик ZigBee CC2531 MacOS BigSur</title>
       <link>https://pahanini.com/posts/zigbee-flashing-cc2531/</link>
       <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
-      
       <guid>https://pahanini.com/posts/zigbee-flashing-cc2531/</guid>
       <description>&lt;p&gt;Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

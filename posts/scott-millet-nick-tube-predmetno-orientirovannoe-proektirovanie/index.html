@@ -1,178 +1,282 @@
 <!DOCTYPE html>
-<html lang="ru-ru">
+<html lang="ru-ru"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн | pahanini.com</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.
-Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
-под разными углами.
-Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав.">
-    <meta name="generator" content="Hugo 0.110.0">
-    
-    
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн | pahanini.com - записная книжка</title>
 
     
-<link rel="stylesheet" href="/ananke/css/main.min.css" >
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="pahanini" />
+<meta name="description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.
+" />
+
+
+<link rel="canonical" href="https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/" />
+
+
+<meta property="og:url" content="https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/">
+  <meta property="og:site_name" content="pahanini.com - записная книжка">
+  <meta property="og:title" content="Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн">
+  <meta property="og:description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-02-09T08:53:59+05:00">
+    <meta property="article:modified_time" content="2024-07-19T18:43:56+05:00">
+    <meta property="article:tag" content="DDD">
+    <meta property="og:image" content="https://pahanini.com/Understanding-Computation.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pahanini.com/Understanding-Computation.jpg">
+  <meta name="twitter:title" content="Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн">
+  <meta name="twitter:description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.">
+
+
+
+<meta name="generator" content="Hugo 0.129.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
 
 
 
 
     
-      
-
+    <link rel="stylesheet" href="/css/custom.css" />
     
 
-    
-    
-    <meta property="og:title" content="Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн" />
-<meta property="og:description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.
-Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
-под разными углами.
-Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-02-09T08:53:59+05:00" />
-<meta property="article:modified_time" content="2022-02-09T08:53:59+05:00" />
-<meta itemprop="name" content="Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн">
-<meta itemprop="description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.
-Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
-под разными углами.
-Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав."><meta itemprop="datePublished" content="2022-02-09T08:53:59+05:00" />
-<meta itemprop="dateModified" content="2022-02-09T08:53:59+05:00" />
-<meta itemprop="wordCount" content="318">
-<meta itemprop="keywords" content="DDD," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн"/>
-<meta name="twitter:description" content="Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.
-Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
-под разными углами.
-Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав."/>
-
-      
-    
-	
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(91794220, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
 
-  <body class="ma0 avenir bg-near-white">
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
 
     
-   
-  
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 pt-4 pb-4"
+  :class="{ 'transition bg-base-100 shadow-xl dark:border-b dark:border-base-content/30': isSticky }">
 
-  
-  
-  <header class="cover bg-top" style="background-image: url('https://pahanini.com/images/cat-orange.jpg');">
-    <div class="pb3-m pb6-l bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
-      
-        pahanini.com
-      
-    </a>
-    <div class="flex-l items-center">
-      
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Повернуть!">
+        <div class="h-10 rounded-full">
+          <img src="/me/ava.jpg" alt="pahanini" />
+        </div>
+      </div>
 
       
+      <div>
+        
+        <a href="https://pahanini.com/" class="text-lg font-semibold cursor-pointer">
+          pahanini
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Drink coffee. Do stupid things faster with more energy.</div>
+        
+      </div>
       
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square">
+        <ion-icon name="menu-outline" size="large"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
 
 
 
 
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Поиск">
+    <ion-icon name="search"></ion-icon>
+    Поиск
+  </a>
+</li>
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
+    <ion-icon name="archive"></ion-icon>
+    Архивы
+  </a>
+</li>
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="Все категории">
+    <ion-icon name="grid"></ion-icon>
+    Все категории
+  </a>
+</li>
 
 
 
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
+    <ion-icon name="pricetags"></ion-icon>
+    Все теги
+  </a>
+</li>
 
 
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+      </ul>
     </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+      
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+        <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+        <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+        <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+        <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+      </a>
+      
+
+      
+      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+        <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+      </a>
+      
+    </section>
   </div>
 </nav>
 
-      <div class="tc-l pv6 ph3 ph4-ns">
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <section class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  <section class="mx-auto prose dark:prose-invert" id="dream-single-page">
+    <header>
+      <h1>Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн</h1>
+      <p class="text-sm">
         
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн</h1>
+          <span data-format="luxon">2022-02-09T08:53:59&#43;05:00</span>
+        
+
+        | <span>2 минуты чтения</span>
+
+        
+        | <span>Обновлено
           
+            <span data-format="luxon">2024-07-19T18:43:56&#43;05:00</span>
+          </span>
         
-      </div>
-    </div>
-  </header>
-
-
-
-    <main class="pb7" role="main">
-      
+      </p>
+      <div class="flex justify-between">
+        <div class="flex items-center">
   
-  <article class="flex-l flex-wrap justify-between mw8 center ph3">
-    <header class="mt4 w-100">
-      <aside class="instapaper_ignoref b helvetica tracked">
-          
-        POSTS
-      </aside>
-      
+  <span>@</span>
+  
+
+  <span>
+  
+    pahanini
+  
+  </span>
+</div>
 
 
+        <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%d0%9f%d1%80%d0%b5%d0%b4%d0%bc%d0%b5%d1%82%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b5%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5%2c%20%d0%a1%d0%ba%d0%be%d1%82%d1%82%20%d0%9c%d0%b8%d0%bb%d0%bb%d0%b5%d1%82%d1%82%2c%20%d0%9d%d0%b8%d0%ba%20%d0%a2%d1%8e%d0%bd&url=https%3a%2f%2fpahanini.com%2fposts%2fscott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fpahanini.com%2fposts%2fscott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
 
-
-  <div id="sharing" class="mt3">
-
-    
-    <a href="https://www.facebook.com/sharer.php?u=https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/" class="facebook no-underline" aria-label="share on Facebook">
-      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
-
-    </a>
-
-    
-    
-    <a href="https://twitter.com/share?url=https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/&amp;text=%d0%9f%d1%80%d0%b5%d0%b4%d0%bc%d0%b5%d1%82%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b5%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5,%20%d0%a1%d0%ba%d0%be%d1%82%d1%82%20%d0%9c%d0%b8%d0%bb%d0%bb%d0%b5%d1%82%d1%82,%20%d0%9d%d0%b8%d0%ba%20%d0%a2%d1%8e%d0%bd" class="twitter no-underline" aria-label="share on Twitter">
-      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
-
-    </a>
-
-    
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pahanini.com/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/&amp;title=%d0%9f%d1%80%d0%b5%d0%b4%d0%bc%d0%b5%d1%82%d0%bd%d0%be-%d0%be%d1%80%d0%b8%d0%b5%d0%bd%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%bd%d0%be%d0%b5%20%d0%bf%d1%80%d0%be%d0%b5%d0%ba%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5,%20%d0%a1%d0%ba%d0%be%d1%82%d1%82%20%d0%9c%d0%b8%d0%bb%d0%bb%d0%b5%d1%82%d1%82,%20%d0%9d%d0%b8%d0%ba%20%d0%a2%d1%8e%d0%bd" class="linkedin no-underline" aria-label="share on LinkedIn">
-      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-
-    </a>
-  </div>
-
-
-      
-      
-      
-      <time class="f6 mv4 dib tracked" datetime="2022-02-09T08:53:59+05:00">February 9, 2022</time>
-
-      
-      
+      </div>
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.</p>
+
+    <main>
+      
+      <img src="cat-orange.jpg" />
+      
+
+      <p>Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.</p>
 <p>Книга состоит из 4 частей и 26 глав. В книге есть несколько ключевых идей и концепций, к которым постоянно идет отсылка
 под разными углами.</p>
 <p>Перечислю основные, далее будут ссылки на все части книги где будет приведено краткое содержание глав.</p>
@@ -203,52 +307,282 @@
 а некоторые содержат новую информацию.</p>
 <ul>
 <li><a href="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/">Часть 1. Принципы и приемы предметно ориентированного проектирования.</a></li>
-</ul><ul class="pa0">
+</ul>
+    </main>
+  </section>
+
   
-   <li class="list">
-     <a href="/tags/ddd" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">DDD</a>
-   </li>
+
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+
+    
+  </section>
+</div>
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>
+    © 2022 - 2024 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </section>
+        <section class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">О себе</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru">sima-land.ru</a></p>
+<p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
+код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
+<p>Еще у меня много разных хобби не связанных с ИТ.</p>
+<p>Этот сайт я использую как записную книжку. Может
+эта информация будет полезна кому-то еще.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Фото</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Все фото на сайте мои и чаще никак не связаны с темой статьи.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Лицензия（Creative Commons）</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Контент сайта лицензирован <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p>All contents of this website are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Социальные сети</div>
+
+        <ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:pahanini@gmail.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  
+  <li>
+    <a href="https://github.com/pahanini" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://x.com/pahanini" target="_blank" title="X">
+      <ion-icon name="logo-x"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://instagram.com/pahanini" target="_blank" title="Instagram">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://stackoverflow.com/users/4695479/pavel-tetyaev" target="_blank" title="stack overflow">
+      <ion-icon name="logo-stackoverflow"></ion-icon>
+    </a>
+  </li>
   
 </ul>
-<div class="mt6 instapaper_ignoref">
-      
-      
+
+      </div>
+    </article>
+  </div>
+  
+
+  
+  
+</div>
+
+          </div>
+        </section>
       </div>
     </div>
 
-    <aside class="w-30-l mt6-l">
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(91794220, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+    
+
+
+<script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "ru" }).toFormat("yyyy.MM.dd")
+    })
+  }
+</script>
+
+
+
+<script>
+  window.customSyntaxHighlighting = {
+    light: "/css/syntax-light.min.css",
+    dark: "/css/syntax-dark.min.css"
+  }
+
+  document.addEventListener('alpine:initialized', () => {
+    var isDark = Alpine.store('darkMode').isDark()
+    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+    document
+      .querySelector('link[data-custom-syntax-highlighting]')
+      .setAttribute('href', customSyntaxHighlightingUrl)
+  })
+</script>
 
 
 
 
-</aside>
+    
 
-  </article>
+    
 
-    </main>
-    <footer class="pink bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://pahanini.com/" >
-    &copy;  pahanini.com 2023 
-  </a>
-    <div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-  </div>
-</footer>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

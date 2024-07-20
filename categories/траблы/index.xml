@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Траблы on pahanini.com - записная книжка</title>
+    <link>https://pahanini.com/categories/%D1%82%D1%80%D0%B0%D0%B1%D0%BB%D1%8B/</link>
+    <description>Recent content in Траблы on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/categories/%D1%82%D1%80%D0%B0%D0%B1%D0%BB%D1%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как установить ntfs-3g на macOS Ventura</title>
+      <link>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</link>
+      <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
+      <guid>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</guid>
+      <description>&lt;p&gt;К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &amp;lsquo;Filesystem is dirty&amp;rsquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Как прошить стик ZigBee CC2531 MacOS BigSur</title>
+      <link>https://pahanini.com/posts/zigbee-flashing-cc2531/</link>
+      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/zigbee-flashing-cc2531/</guid>
+      <description>&lt;p&gt;Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

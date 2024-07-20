@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on pahanini.com</title>
+    <title>Categories on pahanini.com - записная книжка</title>
     <link>https://pahanini.com/categories/</link>
-    <description>Recent content in Categories on pahanini.com</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ru-ru</language><atom:link href="https://pahanini.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Categories on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Юмор</title>
+      <link>https://pahanini.com/categories/%D1%8E%D0%BC%D0%BE%D1%80/</link>
+      <pubDate>Fri, 19 Jul 2024 11:23:54 +0500</pubDate>
+      <guid>https://pahanini.com/categories/%D1%8E%D0%BC%D0%BE%D1%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Обучение</title>
+      <link>https://pahanini.com/categories/%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/</link>
+      <pubDate>Sat, 07 Oct 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/categories/%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Траблы</title>
+      <link>https://pahanini.com/categories/%D1%82%D1%80%D0%B0%D0%B1%D0%BB%D1%8B/</link>
+      <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
+      <guid>https://pahanini.com/categories/%D1%82%D1%80%D0%B0%D0%B1%D0%BB%D1%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Кратко</title>
+      <link>https://pahanini.com/categories/%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE/</link>
+      <pubDate>Thu, 10 Feb 2022 08:53:59 +0500</pubDate>
+      <guid>https://pahanini.com/categories/%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

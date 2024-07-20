@@ -1,56 +1,89 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on pahanini.com</title>
+    <title>Tags on pahanini.com - записная книжка</title>
     <link>https://pahanini.com/tags/</link>
-    <description>Recent content in Tags on pahanini.com</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tags on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Tue, 16 May 2023 09:45:30 +0500</lastBuildDate><atom:link href="https://pahanini.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zoom</title>
+      <link>https://pahanini.com/tags/zoom/</link>
+      <pubDate>Fri, 19 Jul 2024 11:23:54 +0500</pubDate>
+      <guid>https://pahanini.com/tags/zoom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Context</title>
+      <link>https://pahanini.com/tags/context/</link>
+      <pubDate>Sat, 07 Oct 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/tags/context/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://pahanini.com/tags/golang/</link>
+      <pubDate>Sat, 07 Oct 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keenetic</title>
+      <link>https://pahanini.com/tags/keenetic/</link>
+      <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
+      <guid>https://pahanini.com/tags/keenetic/</guid>
+      <description></description>
+    </item>
     <item>
       <title>MacOS</title>
       <link>https://pahanini.com/tags/macos/</link>
       <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
-      
       <guid>https://pahanini.com/tags/macos/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NTFS</title>
       <link>https://pahanini.com/tags/ntfs/</link>
       <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
-      
       <guid>https://pahanini.com/tags/ntfs/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Предметно-ориентированное проектирование</title>
+      <title>DDD</title>
       <link>https://pahanini.com/tags/ddd/</link>
       <pubDate>Thu, 10 Feb 2022 08:53:59 +0500</pubDate>
-      
       <guid>https://pahanini.com/tags/ddd/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CC2531</title>
       <link>https://pahanini.com/tags/cc2531/</link>
       <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
-      
       <guid>https://pahanini.com/tags/cc2531/</guid>
       <description></description>
     </item>
-    
+    <item>
+      <title>Cctool</title>
+      <link>https://pahanini.com/tags/cctool/</link>
+      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/tags/cctool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mqtt</title>
+      <link>https://pahanini.com/tags/mqtt/</link>
+      <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/tags/mqtt/</guid>
+      <description></description>
+    </item>
     <item>
       <title>ZigBee</title>
       <link>https://pahanini.com/tags/zigbee/</link>
       <pubDate>Sat, 04 Sep 2021 13:37:24 +0500</pubDate>
-      
       <guid>https://pahanini.com/tags/zigbee/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
