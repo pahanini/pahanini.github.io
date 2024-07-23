@@ -6,7 +6,7 @@
     <description>Recent content on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 19:34:23 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zoom Bingo</title>
@@ -28,6 +28,13 @@
       <pubDate>Tue, 16 May 2023 09:45:30 +0500</pubDate>
       <guid>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</guid>
       <description>&lt;p&gt;К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &amp;lsquo;Filesystem is dirty&amp;rsquo;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ESB или сервисная шина предприятия для начинающих</title>
+      <link>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</link>
+      <pubDate>Thu, 04 May 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</guid>
+      <description>&lt;p&gt;Объясняю просто зачем нужна шина данных компании или ESB.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Обзор первой части книги. Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн.</title>

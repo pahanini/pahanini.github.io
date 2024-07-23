@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ESB on pahanini.com - записная книжка</title>
+    <link>https://pahanini.com/tags/esb/</link>
+    <description>Recent content in ESB on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Tue, 23 Jul 2024 19:34:23 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/tags/esb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ESB или сервисная шина предприятия для начинающих</title>
+      <link>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</link>
+      <pubDate>Thu, 04 May 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</guid>
+      <description>&lt;p&gt;Объясняю просто зачем нужна шина данных компании или ESB.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

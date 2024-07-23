@@ -6,7 +6,7 @@
     <description>Recent content in Обучение on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2024 19:34:23 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/categories/%D0%BE%D0%B1%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang context для чайников</title>
@@ -14,6 +14,13 @@
       <pubDate>Sat, 07 Oct 2023 13:37:24 +0500</pubDate>
       <guid>https://pahanini.com/posts/go-context/</guid>
       <description>&lt;p&gt;Это кусок курса по go, который я преподавал когда-то давно.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ESB или сервисная шина предприятия для начинающих</title>
+      <link>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</link>
+      <pubDate>Thu, 04 May 2023 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/servisnaya-shina-esb-dlya-chainikov/</guid>
+      <description>&lt;p&gt;Объясняю просто зачем нужна шина данных компании или ESB.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
