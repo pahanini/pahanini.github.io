@@ -8,6 +8,13 @@
     <language>ru-ru</language>
     <atom:link href="https://pahanini.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>GRPC vs REST</title>
+      <link>https://pahanini.com/posts/grpc-vs-rest/</link>
+      <pubDate>Fri, 16 Aug 2024 20:36:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/grpc-vs-rest/</guid>
+      <description>&lt;p&gt;Что такое GRPC и зачем он если есть REST?&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Совместимость мачт и парусов разных производителей. IMCS</title>
       <link>https://pahanini.com/posts/windsurfing-mast-imcs/</link>
       <pubDate>Mon, 29 Jul 2024 22:21:23 +0500</pubDate>

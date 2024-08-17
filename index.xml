@@ -6,8 +6,15 @@
     <description>Recent content on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 08 Aug 2024 23:32:04 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 17 Aug 2024 12:37:37 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GRPC vs REST</title>
+      <link>https://pahanini.com/posts/grpc-vs-rest/</link>
+      <pubDate>Fri, 16 Aug 2024 20:36:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/grpc-vs-rest/</guid>
+      <description>&lt;p&gt;Что такое GRPC и зачем он если есть REST?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Совместимость мачт и парусов разных производителей. IMCS</title>
       <link>https://pahanini.com/posts/windsurfing-mast-imcs/</link>

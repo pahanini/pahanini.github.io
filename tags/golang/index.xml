@@ -6,8 +6,15 @@
     <description>Recent content in Golang on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Sat, 20 Jul 2024 13:48:37 +0500</lastBuildDate>
+    <lastBuildDate>Sat, 17 Aug 2024 12:37:37 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GRPC vs REST</title>
+      <link>https://pahanini.com/posts/grpc-vs-rest/</link>
+      <pubDate>Fri, 16 Aug 2024 20:36:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/grpc-vs-rest/</guid>
+      <description>&lt;p&gt;Что такое GRPC и зачем он если есть REST?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Golang context для чайников</title>
       <link>https://pahanini.com/posts/go-context/</link>
