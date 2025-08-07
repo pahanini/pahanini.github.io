@@ -9,8 +9,12 @@
     <title>Как прошить стик ZigBee CC2531 MacOS BigSur | pahanini.com - записная книжка</title>
 
     
-<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
 
+
+<link rel="canonical" href="https://pahanini.com/posts/zigbee-flashing-cc2531/" />
 
 
 
@@ -19,7 +23,11 @@
 " />
 
 
-<link rel="canonical" href="https://pahanini.com/posts/zigbee-flashing-cc2531/" />
+<meta name="keywords" content="ZigBee,CC2531,Mqtt,Cctool">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
 
 
 <meta property="og:url" content="https://pahanini.com/posts/zigbee-flashing-cc2531/">
@@ -47,15 +55,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.129.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+  
 
-<style>
-
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
-</style>
 
 
     
@@ -80,11 +85,14 @@
 
 
 
+
+
+
     
     <link rel="stylesheet" href="/css/custom.css" />
     
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
   </head>
 
   <body x-data="{
@@ -96,12 +104,14 @@
     
 <nav x-data="{ isSticky: false }"
   x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 pt-4 pb-4"
-  :class="{ 'transition bg-base-100 shadow-xl dark:border-b dark:border-base-content/30': isSticky }">
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
+  
   <div class="container flex justify-between px-4">
+  
     <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Повернуть!">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Повернуть!">
         <div class="h-10 rounded-full">
           <img src="/me/ava.jpg" alt="pahanini" />
         </div>
@@ -121,18 +131,29 @@
       
     </section>
 
+    
+    
+
     <div class="dropdown dropdown-end sm:hidden">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-square">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
       </div>
-      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow">
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
         
+
+
+
+
+
 
 
 <li>
   <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
     <ion-icon name="information-circle"></ion-icon></div>
 </li>
+
+
+
 
 
 
@@ -146,12 +167,24 @@
 
 
 
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
     <ion-icon name="archive"></ion-icon>
     Архивы
   </a>
 </li>
+
 
 
 
@@ -164,6 +197,7 @@
 
 
 
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
     <ion-icon name="pricetags"></ion-icon>
@@ -173,52 +207,65 @@
 
 
 
-<li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
-    <ion-icon name="logo-rss"></ion-icon>
-    RSS
-  </a>
-</li>
+
 
 
       </ul>
     </div>
     <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
       
-      
-      
-      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
       
       
 
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
+
+
+
+
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
-        <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
-      </a>
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
       
 
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
-        <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-      </a>
-      
 
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
-        <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
-        <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
-        <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
-      </a>
       
     </section>
   </div>
@@ -227,29 +274,46 @@
 
     <div class="flip-container" :class="{ 'flip-it': flip }">
       <div class="flipper">
-        <section class="front">
+        <div class="front">
           <div class="container">
             
-<div class="mt-4 px-4">
-  <section class="mx-auto prose dark:prose-invert" id="dream-single-page">
-    <header>
-      <h1>Как прошить стик ZigBee CC2531 MacOS BigSur</h1>
-      <p class="text-sm">
-        
-          <span data-format="luxon">2021-09-04T13:37:24&#43;05:00</span>
-        
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
 
-        | <span>1 минута чтения</span>
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Как прошить стик ZigBee CC2531 MacOS BigSur">
+  <meta itemprop="description" content="Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.">
+  <meta itemprop="datePublished" content="2021-09-04T13:37:24+05:00">
+  <meta itemprop="dateModified" content="2024-07-20T13:48:37+05:00">
+  <meta itemprop="wordCount" content="162">
+  <meta itemprop="image" content="https://pahanini.com/me/background.jpg">
+  <meta itemprop="keywords" content="ZigBee,CC2531,Mqtt,Cctool">
 
-        
-        | <span>Обновлено
+      <header>
+        <h1 itemprop="headline">Как прошить стик ZigBee CC2531 MacOS BigSur</h1>
+        <p class="text-sm">
           
-            <span data-format="luxon">2024-07-20T13:48:37&#43;05:00</span>
-          </span>
+            <span data-format="luxon">2021-09-04T13:37:24&#43;05:00</span>
+          
+
+          | <span>1 минута чтения</span>
+
+          
+          | <span>Обновлено
+            
+              <span data-format="luxon">2024-07-20T13:48:37&#43;05:00</span>
+            </span>
+          
+        </p>
+
         
-      </p>
-      <div class="flex justify-between">
-        <div class="flex items-center">
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
     
     <span>@</span>
     
@@ -265,8 +329,9 @@
   </span>
 </div>
 
+          
 
-        <span class="flex items-center gap-2">
+          <span class="flex items-center gap-2">
   <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%d0%9a%d0%b0%d0%ba%20%d0%bf%d1%80%d0%be%d1%88%d0%b8%d1%82%d1%8c%20%d1%81%d1%82%d0%b8%d0%ba%20ZigBee%20CC2531%20MacOS%20BigSur&url=https%3a%2f%2fpahanini.com%2fposts%2fzigbee-flashing-cc2531%2f" title="Share on X">
     <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
   </a>
@@ -275,20 +340,23 @@
   </a>
 </span>
 
-      </div>
-    </header>
+        </div>
+      </header>
 
-    <main>
-      
-      <img src="cows.jpg" />
-      
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="cows.jpg" alt="Как прошить стик ZigBee CC2531 MacOS BigSur" />
+        
 
-      <p>Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.</p>
-<p>Сам Процесс прошивки подробно описан на здесь <a href="https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html">https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html</a>, однако инструкции для MacOS в 2021 году уже не актуальны. При попытке выполнить команду <code>.configure</code> получаем ошибку</p>
+        <p>Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.</p>
+<p>Сам Процесс прошивки подробно описан на здесь <a href="https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html" target="_blank">https://www.zigbee2mqtt.io/information/flashing_the_cc2531.html</a>
+, однако инструкции для MacOS в 2021 году уже не актуальны. При попытке выполнить команду <code>.configure</code> получаем ошибку</p>
 <pre tabindex="0"><code>checking for the Boost regex library... no
 configure: error: cannot find the flags to link with Boost regex
-</code></pre><p>Соответствующий issue есть на github <a href="https://github.com/dashesy/cc-tool/issues/25">https://github.com/dashesy/cc-tool/issues/25</a>. Предложенный способ решения это установка boost 1.60 вместо 1.76 на данный момент не работает так как формула boost 1.60 удалена из homebrew.</p>
-<p>Очень долго искал решение, пробовал собрать boost 1.60, использовать докер. В итоге нашел решение  <a href="https://gist.github.com/kidpixo/ef1a26ae953e3939a4eebe1b6fd2f07c">здесь</a>. С данными флагами cc-tool собирается на MacOS.</p>
+</code></pre><p>Соответствующий issue есть на github <a href="https://github.com/dashesy/cc-tool/issues/25" target="_blank">https://github.com/dashesy/cc-tool/issues/25</a>
+. Предложенный способ решения это установка boost 1.60 вместо 1.76 на данный момент не работает так как формула boost 1.60 удалена из homebrew.</p>
+<p>Очень долго искал решение, пробовал собрать boost 1.60, использовать докер. В итоге нашел решение  <a href="https://gist.github.com/kidpixo/ef1a26ae953e3939a4eebe1b6fd2f07c" target="_blank">здесь</a>
+. С данными флагами cc-tool собирается на MacOS.</p>
 <pre tabindex="0"><code>CC=/usr/bin/clang \
 CXX=/usr/bin/clang++ \
 CPPFLAGS=-I/usr/local/include \
@@ -305,29 +373,35 @@ LIBUSB_LIBS=&#34;-L/usr/local/lib -lusb-1.0&#34; \
  ./configure
 
 make clean ; make
-</code></pre><p>Может кому и пригодится. Если есть решение лучше прошу написать в <a href="https://github.com/dashesy/cc-tool/issues/25">issue</a>.</p>
-    </main>
-  </section>
+</code></pre><p>Может кому и пригодится. Если есть решение лучше прошу написать в <a href="https://github.com/dashesy/cc-tool/issues/25" target="_blank">issue</a>
+.</p>
 
-  
+        
+      </section>
 
-  
+      
 
-  <section class="max-w-[65ch] mx-auto space-y-4">
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end lg:self-start"
+  >
     
-
-    
-
-    
-  </section>
+  </div>
 </div>
 
 
-            <footer class="flex justify-between items-center gap-2 px-4 py-12">
-              <div>
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
   
   <p>
-    © 2022 - 2024 pahanini.com - записная книжка
+    © 2022 - 2025 pahanini.com - записная книжка
   </p>
   
 
@@ -342,18 +416,19 @@ make clean ; make
   
 </div>
 
-              <div
+  <div
   x-data="{ icons: [
-    { name: 'moon', status: 'y' },
     { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
       role="button"
       tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
       class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
       :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
       @click="$store.darkMode.toggle(icon.status)"
@@ -368,24 +443,27 @@ make clean ; make
   </template>
 </div>
 
-            </footer>
+</footer>
+
           </div>
-        </section>
-        <section class="back">
+        </div>
+        <div class="back">
           <div class="container">
-            <div class="dream-grid">
+            
+            <div class="dream-grid dream-grid-about">
   
   
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">О себе</div>
 
         <div class="prose dark:prose-invert">
-          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru">sima-land.ru</a></p>
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru" target="_blank">sima-land.ru</a>
+</p>
 <p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
 код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
 <p>Еще у меня много разных хобби не связанных с ИТ.</p>
@@ -399,7 +477,7 @@ make clean ; make
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Фото</div>
@@ -414,7 +492,7 @@ make clean ; make
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Лицензия（Creative Commons）</div>
@@ -433,7 +511,7 @@ make clean ; make
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Социальные сети</div>
@@ -487,76 +565,91 @@ make clean ; make
   
 
   
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2025 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
   
 </div>
 
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
           </div>
-        </section>
+        </div>
       </div>
     </div>
 
     <script>
   window.lightTheme = "emerald"
   window.darkTheme = "forest"
+</script>
 
-  window.hasTwitterEmbed =  null 
-  if (window.hasTwitterEmbed) {
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
     
-    window.twttr = (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {}
-      if (d.getElementById(id)) return t
-      js = d.createElement(s)
-      js.id = id
-      js.src = 'https://platform.twitter.com/widgets.js'
-      fjs.parentNode.insertBefore(js, fjs)
-
-      t._e = []
-      t.ready = function (f) {
-        t._e.push(f)
-      }
-
-      return t
-    })(document, 'script', 'twitter-wjs')
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
-<script src="/js/main.js"></script>
-
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(91794220, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VN2SQ6G20F"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VN2SQ6G20F');
-</script>
+  
+  <script src="/js/grid.min.js"></script>
 
 
 
+
+  
+
+<script src="/js/main.min.js"></script>
 
     
 
 
-<script
+  <script
   src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
   integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
   crossorigin="anonymous"
@@ -576,20 +669,30 @@ make clean ; make
 
 
 <script>
-  window.customSyntaxHighlighting = {
-    light: "/css/syntax-light.min.css",
-    dark: "/css/syntax-dark.min.css"
-  }
+    window.customSyntaxHighlighting = {
+      light: "/css/syntax-light.min.css",
+      dark: "/css/syntax-dark.min.css"
+    }
 
-  document.addEventListener('alpine:initialized', () => {
-    var isDark = Alpine.store('darkMode').isDark()
-    var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+    document.addEventListener('alpine:initialized', () => {
+      var isDark = Alpine.store('darkMode').isDark()
+      var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
 
-    document
-      .querySelector('link[data-custom-syntax-highlighting]')
-      .setAttribute('href', customSyntaxHighlightingUrl)
-  })
-</script>
+      document
+        .querySelector('link[data-custom-syntax-highlighting]')
+        .setAttribute('href', customSyntaxHighlightingUrl)
+    })
+  </script>
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
 
 
 
@@ -598,7 +701,11 @@ make clean ; make
 
     
 
-    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
   </body>
 </html>

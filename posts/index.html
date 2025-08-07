@@ -9,16 +9,25 @@
     <title>Архив | pahanini.com - записная книжка</title>
 
     
-<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
 
+
+<link rel="canonical" href="https://pahanini.com/posts/" />
 
 
 
 <meta name="author" content="pahanini" />
-<meta name="description" content="В хронологическом порядке" />
+<meta name="description" content="В хронологическом порядке
+" />
 
 
-<link rel="canonical" href="https://pahanini.com/posts/" />
+<meta name="keywords" content="">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
 
 
 <meta property="og:url" content="https://pahanini.com/posts/">
@@ -39,15 +48,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.129.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+  
 
-<style>
-
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
-</style>
 
 
      
@@ -56,7 +62,7 @@
     <link rel="stylesheet" href="/css/custom.css" />
     
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
   </head>
 
   <body x-data="{
@@ -68,12 +74,14 @@
     
 <nav x-data="{ isSticky: false }"
   x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 pt-4 pb-4"
-  :class="{ 'transition bg-base-100 shadow-xl dark:border-b dark:border-base-content/30': isSticky }">
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
+  
   <div class="container flex justify-between px-4">
+  
     <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Повернуть!">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Повернуть!">
         <div class="h-10 rounded-full">
           <img src="/me/ava.jpg" alt="pahanini" />
         </div>
@@ -93,18 +101,29 @@
       
     </section>
 
+    
+    
+
     <div class="dropdown dropdown-end sm:hidden">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-square">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
       </div>
-      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow">
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
         
+
+
+
+
+
 
 
 <li>
   <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
     <ion-icon name="information-circle"></ion-icon></div>
 </li>
+
+
+
 
 
 
@@ -118,12 +137,24 @@
 
 
 
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
     <ion-icon name="archive"></ion-icon>
     Архивы
   </a>
 </li>
+
 
 
 
@@ -136,6 +167,7 @@
 
 
 
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
     <ion-icon name="pricetags"></ion-icon>
@@ -145,52 +177,65 @@
 
 
 
-<li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
-    <ion-icon name="logo-rss"></ion-icon>
-    RSS
-  </a>
-</li>
+
 
 
       </ul>
     </div>
     <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
       
-      
-      
-      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
       
       
 
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
+
+
+
+
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
-        <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
-      </a>
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
       
 
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
-        <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-      </a>
-      
 
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
-        <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
-        <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
-        <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
-      </a>
       
     </section>
   </div>
@@ -199,14 +244,14 @@
 
     <div class="flip-container" :class="{ 'flip-it': flip }">
       <div class="flipper">
-        <section class="front">
+        <div class="front">
           <div class="container">
             
 
 <div class="mt-8 lg:mt-12 px-4">
   <div class="mx-auto prose dark:prose-invert">
     <h1 class="text-3xl">
-      Архивы
+      Архив
     </h1>
     
     <p class="text-sm"><p>В хронологическом порядке</p>
@@ -217,15 +262,36 @@
   <div class="max-w-[65ch] mx-auto mt-8 lg:mt-12">
     <ul class="timeline timeline-vertical">
       
+      
       <li class="[--timeline-col-start:64px]">
         <hr class="dark:bg-base-content" />
-        <div class="timeline-start !justify-self-start">
+        <div class="timeline-start justify-self-start!">
+          <div class="text-lg font-semibold">2025</div>
+        </div>
+        <div class="timeline-middle flex items-center mx-8 my-2">
+          <ion-icon name="time"></ion-icon>
+        </div>
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
+          <ul>
+            
+            <li>
+              <a href="/posts/change-pdf-modify-date/">Как изменить File Modification Date/Time у PDF файла</a>
+            </li>
+            
+          </ul>
+        </div>
+        <hr class="dark:bg-base-content" />
+      </li>
+      
+      <li class="[--timeline-col-start:64px]">
+        <hr class="dark:bg-base-content" />
+        <div class="timeline-start justify-self-start!">
           <div class="text-lg font-semibold">2024</div>
         </div>
         <div class="timeline-middle flex items-center mx-8 my-2">
           <ion-icon name="time"></ion-icon>
         </div>
-        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8">
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
           <ul>
             
             <li>
@@ -247,13 +313,13 @@
       
       <li class="[--timeline-col-start:64px]">
         <hr class="dark:bg-base-content" />
-        <div class="timeline-start !justify-self-start">
+        <div class="timeline-start justify-self-start!">
           <div class="text-lg font-semibold">2023</div>
         </div>
         <div class="timeline-middle flex items-center mx-8 my-2">
           <ion-icon name="time"></ion-icon>
         </div>
-        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8">
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
           <ul>
             
             <li>
@@ -275,13 +341,13 @@
       
       <li class="[--timeline-col-start:64px]">
         <hr class="dark:bg-base-content" />
-        <div class="timeline-start !justify-self-start">
+        <div class="timeline-start justify-self-start!">
           <div class="text-lg font-semibold">2022</div>
         </div>
         <div class="timeline-middle flex items-center mx-8 my-2">
           <ion-icon name="time"></ion-icon>
         </div>
-        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8">
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
           <ul>
             
             <li>
@@ -299,13 +365,13 @@
       
       <li class="[--timeline-col-start:64px]">
         <hr class="dark:bg-base-content" />
-        <div class="timeline-start !justify-self-start">
+        <div class="timeline-start justify-self-start!">
           <div class="text-lg font-semibold">2021</div>
         </div>
         <div class="timeline-middle flex items-center mx-8 my-2">
           <ion-icon name="time"></ion-icon>
         </div>
-        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8">
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
           <ul>
             
             <li>
@@ -319,13 +385,13 @@
       
       <li class="[--timeline-col-start:64px]">
         <hr class="dark:bg-base-content" />
-        <div class="timeline-start !justify-self-start">
+        <div class="timeline-start justify-self-start!">
           <div class="text-lg font-semibold">0001</div>
         </div>
         <div class="timeline-middle flex items-center mx-8 my-2">
           <ion-icon name="time"></ion-icon>
         </div>
-        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8">
+        <div class="timeline-end timeline-box dark:border-base-content/60 prose dark:prose-invert my-8 text-sm">
           <ul>
             
             <li>
@@ -342,11 +408,13 @@
 </div>
 
 
-            <footer class="flex justify-between items-center gap-2 px-4 py-12">
-              <div>
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
   
   <p>
-    © 2022 - 2024 pahanini.com - записная книжка
+    © 2022 - 2025 pahanini.com - записная книжка
   </p>
   
 
@@ -361,18 +429,19 @@
   
 </div>
 
-              <div
+  <div
   x-data="{ icons: [
-    { name: 'moon', status: 'y' },
     { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
       role="button"
       tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
       class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
       :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
       @click="$store.darkMode.toggle(icon.status)"
@@ -387,24 +456,27 @@
   </template>
 </div>
 
-            </footer>
+</footer>
+
           </div>
-        </section>
-        <section class="back">
+        </div>
+        <div class="back">
           <div class="container">
-            <div class="dream-grid">
+            
+            <div class="dream-grid dream-grid-about">
   
   
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">О себе</div>
 
         <div class="prose dark:prose-invert">
-          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru">sima-land.ru</a></p>
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru" target="_blank">sima-land.ru</a>
+</p>
 <p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
 код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
 <p>Еще у меня много разных хобби не связанных с ИТ.</p>
@@ -418,7 +490,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Фото</div>
@@ -433,7 +505,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Лицензия（Creative Commons）</div>
@@ -452,7 +524,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Социальные сети</div>
@@ -506,71 +578,86 @@
   
 
   
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2025 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
   
 </div>
 
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
           </div>
-        </section>
+        </div>
       </div>
     </div>
 
     <script>
   window.lightTheme = "emerald"
   window.darkTheme = "forest"
+</script>
 
-  window.hasTwitterEmbed =  null 
-  if (window.hasTwitterEmbed) {
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
     
-    window.twttr = (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {}
-      if (d.getElementById(id)) return t
-      js = d.createElement(s)
-      js.id = id
-      js.src = 'https://platform.twitter.com/widgets.js'
-      fjs.parentNode.insertBefore(js, fjs)
-
-      t._e = []
-      t.ready = function (f) {
-        t._e.push(f)
-      }
-
-      return t
-    })(document, 'script', 'twitter-wjs')
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
-<script src="/js/main.js"></script>
-
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(91794220, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VN2SQ6G20F"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VN2SQ6G20F');
-</script>
+  
+  <script src="/js/grid.min.js"></script>
 
 
 
+
+  
+
+<script src="/js/main.min.js"></script>
 
      
 
@@ -578,7 +665,11 @@
 
     
 
-    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
   </body>
 </html>

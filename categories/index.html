@@ -6,11 +6,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Все категории | pahanini.com - записная книжка</title>
+    <title>
+
+
+Все категории | pahanini.com - записная книжка</title>
 
     
-<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
 
+
+<link rel="canonical" href="https://pahanini.com/categories/" />
 
 
 
@@ -18,7 +25,8 @@
 <meta name="description" content="Записная книжка" />
 
 
-<link rel="canonical" href="https://pahanini.com/categories/" />
+
+<meta name="generator" content="Hugo 0.145.0">
 
 
 <meta property="og:url" content="https://pahanini.com/categories/">
@@ -39,15 +47,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.129.0">
 
-<link rel="stylesheet" href="/css/output.css" />
+  
 
-<style>
-
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
-</style>
 
 
      
@@ -56,7 +61,7 @@
     <link rel="stylesheet" href="/css/custom.css" />
     
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
   </head>
 
   <body x-data="{
@@ -68,12 +73,14 @@
     
 <nav x-data="{ isSticky: false }"
   x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
-  class="sticky top-0 z-30 mt-4 lg:mt-8 pt-4 pb-4"
-  :class="{ 'transition bg-base-100 shadow-xl dark:border-b dark:border-base-content/30': isSticky }">
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
 
+  
   <div class="container flex justify-between px-4">
+  
     <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Повернуть!">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Повернуть!">
         <div class="h-10 rounded-full">
           <img src="/me/ava.jpg" alt="pahanini" />
         </div>
@@ -93,18 +100,29 @@
       
     </section>
 
+    
+    
+
     <div class="dropdown dropdown-end sm:hidden">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-square">
-        <ion-icon name="menu-outline" size="large"></ion-icon>
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
       </div>
-      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow">
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
         
+
+
+
+
+
 
 
 <li>
   <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
     <ion-icon name="information-circle"></ion-icon></div>
 </li>
+
+
+
 
 
 
@@ -118,12 +136,24 @@
 
 
 
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
     <ion-icon name="archive"></ion-icon>
     Архивы
   </a>
 </li>
+
 
 
 
@@ -136,6 +166,7 @@
 
 
 
+
 <li>
   <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
     <ion-icon name="pricetags"></ion-icon>
@@ -145,52 +176,65 @@
 
 
 
-<li>
-  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
-    <ion-icon name="logo-rss"></ion-icon>
-    RSS
-  </a>
-</li>
+
 
 
       </ul>
     </div>
     <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
       
-      
-      
-      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
       
       
 
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
+
+
+
+
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
-        <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
-      </a>
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
       
 
       
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
-        <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
-      </a>
-      
 
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
-        <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
-        <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
-      </a>
-      
-
-      
-      <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
-        <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
-      </a>
       
     </section>
   </div>
@@ -199,15 +243,16 @@
 
     <div class="flip-container" :class="{ 'flip-it': flip }">
       <div class="flipper">
-        <section class="front">
+        <div class="front">
           <div class="container">
             
 
-<div class="flex flex-col md:flex-row gap-4 mt-8 lg:mt-12 px-4">
-  <div class="md:basis-[200px] lg:basis-[300px] prose dark:prose-invert">
+
+<div class="flex flex-col md:flex-row mt-4">
+
+  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
     <h1 class="text-2xl">Все категории</h1>
-    <p class="text-sm">5 категорий
-    </p>
+    <p class="text-sm">5 категорий</p>
     <div class="flex flex-wrap gap-4 mt-6">
       
       <a href="/categories/%D0%B2%D0%B8%D0%BD%D0%B4%D1%81%D0%B5%D1%80%D1%84%D0%B8%D0%BD%D0%B3/" class="badge h-6 no-underline hover:badge-primary">
@@ -232,27 +277,35 @@
       
     </div>
   </div>
-  <div class="divider divider-vertical md:divider-horizontal"></div>
-  <div class="flex-1 space-y-4">
-    
-    
-    <a class="card image-full card-compact" href="/posts/grpc-vs-rest/">
-  <figure class="h-[200px]">
   
-    
-    
-    <picture class="w-full">
-      <source srcset="/posts/grpc-vs-rest/cover_huee772750d2fdf77468c4eae3d5b77b71_948128_2136x1602_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/grpc-vs-rest/cover.jpg" alt="cover.jpg" />
-    </picture>
-    
+  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
   
+  <div class="flex-1">
+    
+
+    
+    <div class="dream-grid">
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/grpc-vs-rest/">
+  
+  <figure>
+    
+    
+      
+      <picture>
+        <source srcset="/posts/grpc-vs-rest/cover_hu_e4fefee512cccea5.webp" type="image/webp" />
+        <img src="/posts/grpc-vs-rest/cover.jpg" alt="cover.jpg" />
+      </picture>
+    
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">GRPC vs REST</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2024-08-16T20:36:24&#43;05:00</span>
     
@@ -260,8 +313,10 @@
 
     <p>Что такое GRPC и зачем он если есть REST?</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -277,8 +332,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>3 минуты чтения</span>
       </div>
@@ -286,24 +342,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/windsurfing-mast-imcs/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/windsurfing-mast-imcs/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/windsurfing-mast-imcs/cover_hu3f620736846661c5aafaf66a71a4ae58_782001_3848x2886_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/windsurfing-mast-imcs/cover.jpg" alt="cover.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/windsurfing-mast-imcs/cover_hu_ed69fa35b763985f.webp" type="image/webp" />
+        <img src="/posts/windsurfing-mast-imcs/cover.jpg" alt="cover.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Совместимость мачт и парусов разных производителей. IMCS</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2024-07-29T22:21:23&#43;05:00</span>
     
@@ -311,8 +371,10 @@
 
     <p>Если мачта совпадает с парусом по длине и диаметру — это не значит что она подходит. Важна жесткость и кривизна.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -328,8 +390,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>2 минуты чтения</span>
       </div>
@@ -337,24 +400,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/zoom-bingo/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/zoom-bingo/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/zoom-bingo/brugge_hu7f6171d14cf47f07cd618c06a61c0866_512988_1602x1602_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/zoom-bingo/brugge.jpg" alt="brugge.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/zoom-bingo/brugge_hu_7093774602d80b79.webp" type="image/webp" />
+        <img src="/posts/zoom-bingo/brugge.jpg" alt="brugge.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Zoom Bingo</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2024-07-19T11:23:54&#43;05:00</span>
     
@@ -362,8 +429,10 @@
 
     <p>Как развлечь себя на скучной рекламной встрече в зум.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -379,8 +448,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>1 минута чтения</span>
       </div>
@@ -388,24 +458,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/go-context/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/go-context/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/go-context/crab_hu2167c4dc86807f12181d586275d5c1e6_1026879_4032x3024_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/go-context/crab.jpg" alt="crab.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/go-context/crab_hu_56f94cb3917355bd.webp" type="image/webp" />
+        <img src="/posts/go-context/crab.jpg" alt="crab.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Golang context для чайников</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2023-10-07T13:37:24&#43;05:00</span>
     
@@ -413,8 +487,10 @@
 
     <p>Это кусок курса по go, который я преподавал когда-то давно.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -430,8 +506,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>5 минут чтения</span>
       </div>
@@ -439,24 +516,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/install-ntfs-mac-os-ventura/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/install-ntfs-mac-os-ventura/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/install-ntfs-mac-os-ventura/upsharski_hu64c36a0dd9fb5073911b2b3805981fa2_2422647_4032x3024_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/install-ntfs-mac-os-ventura/upsharski.jpg" alt="upsharski.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/install-ntfs-mac-os-ventura/upsharski_hu_6ecb81c40783a73a.webp" type="image/webp" />
+        <img src="/posts/install-ntfs-mac-os-ventura/upsharski.jpg" alt="upsharski.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Как установить ntfs-3g на macOS Ventura</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2023-05-16T09:45:30&#43;05:00</span>
     
@@ -464,8 +545,10 @@
 
     <p>К моему старенькому роутеру был подключен диск с файловой системой NTFS. После потери питания роутер перестал видеть диск с ошибкой &lsquo;Filesystem is dirty&rsquo;.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -481,8 +564,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>1 минута чтения</span>
       </div>
@@ -490,24 +574,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/servisnaya-shina-esb-dlya-chainikov/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/servisnaya-shina-esb-dlya-chainikov/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/servisnaya-shina-esb-dlya-chainikov/omis_huee6602fa695fc39cd8f51fe38a501fe7_479361_1198x1598_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/servisnaya-shina-esb-dlya-chainikov/omis.jpg" alt="omis.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/servisnaya-shina-esb-dlya-chainikov/omis_hu_97cf8f4cd6359f2c.webp" type="image/webp" />
+        <img src="/posts/servisnaya-shina-esb-dlya-chainikov/omis.jpg" alt="omis.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">ESB или сервисная шина предприятия для начинающих</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2023-05-04T13:37:24&#43;05:00</span>
     
@@ -515,8 +603,10 @@
 
     <p>Объясняю просто зачем нужна шина данных компании или ESB.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -532,8 +622,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>3 минуты чтения</span>
       </div>
@@ -541,24 +632,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/adui_hud793ae62e4d7f91ae33c551315f1addd_1662717_4032x3024_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/adui.jpg" alt="adui.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/adui_hu_82e6262e808fbd20.webp" type="image/webp" />
+        <img src="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie-part-1/adui.jpg" alt="adui.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Обзор первой части книги. Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн.</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2022-02-10T08:53:59&#43;05:00</span>
     
@@ -566,8 +661,10 @@
 
     <h2 id="часть-1-принципы-и-приемы-предметно-ориентированного-проектирования">Часть 1. Принципы и приемы предметно ориентированного проектирования.</h2>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -583,8 +680,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>7 минут чтения</span>
       </div>
@@ -592,24 +690,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/cat-orange_hu3427ecceea2820b32f8034570fc790c9_775113_3264x2448_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/cat-orange.jpg" alt="cat-orange.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/cat-orange_hu_b393d671909544b.webp" type="image/webp" />
+        <img src="/posts/scott-millet-nick-tube-predmetno-orientirovannoe-proektirovanie/cat-orange.jpg" alt="cat-orange.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Предметно-ориентированное проектирование, Скотт Миллетт, Ник Тюн</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2022-02-09T08:53:59&#43;05:00</span>
     
@@ -617,8 +719,10 @@
 
     <p>Попытаюсь кратко изложить содержание книги для тех, кто хочет познакомиться с DDD не тратя много времени.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -634,8 +738,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>2 минуты чтения</span>
       </div>
@@ -643,24 +748,28 @@
   </div>
 </a>
 
-    
-    <a class="card image-full card-compact" href="/posts/zigbee-flashing-cc2531/">
-  <figure class="h-[200px]">
+        </div>
+      
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+          <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/zigbee-flashing-cc2531/">
   
+  <figure>
     
     
-    <picture class="w-full">
-      <source srcset="/posts/zigbee-flashing-cc2531/cows_hua67a706d8a3b35694a1a7a801e1ae38f_393132_1894x643_resize_q75_h2_box.webp" type="image/webp" />
-      <img class="w-full" src="/posts/zigbee-flashing-cc2531/cows.jpg" alt="cows.jpg" />
-    </picture>
+      
+      <picture>
+        <source srcset="/posts/zigbee-flashing-cc2531/cows_hu_cf52156e7ec9bc63.webp" type="image/webp" />
+        <img src="/posts/zigbee-flashing-cc2531/cows.jpg" alt="cows.jpg" />
+      </picture>
     
-  
+    
   </figure>
+  
 
   <div class="card-body">
     <h2 class="card-title">Как прошить стик ZigBee CC2531 MacOS BigSur</h2>
 
-    <p class="date">
+    <p class="date text-base-content/60">
     
       <span data-format="luxon">2021-09-04T13:37:24&#43;05:00</span>
     
@@ -668,8 +777,10 @@
 
     <p>Попробовал прошить стик ZigBee CC2531 на MacOS и столкнулся с тем что сс-tool не хочет собираться на маке. Оказалось все не так просто.</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
     
     <span>@</span>
     
@@ -685,8 +796,9 @@
   </span>
 </div>
 
+      
 
-      <div class="inline-flex items-center">
+      <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
         <span>1 минута чтения</span>
       </div>
@@ -694,33 +806,24 @@
   </div>
 </a>
 
+        </div>
+      
+    </div>
     
 
-    <div class="flex justify-center pt-8">
-      <div class="join grid grid-cols-2">
-  
-  <button class="join-item btn btn-outline btn-sm" disabled>
-    Предыдущая
-  </button>
-  
-  
-  <button class="join-item btn btn-outline btn-sm" disabled>
-    Следующая
-  </button>
-  
-</div>
-
-    </div>
+    
   </div>
 </div>
 
 
 
-            <footer class="flex justify-between items-center gap-2 px-4 py-12">
-              <div>
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
   
   <p>
-    © 2022 - 2024 pahanini.com - записная книжка
+    © 2022 - 2025 pahanini.com - записная книжка
   </p>
   
 
@@ -735,18 +838,19 @@
   
 </div>
 
-              <div
+  <div
   x-data="{ icons: [
-    { name: 'moon', status: 'y' },
     { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
       role="button"
       tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
       class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
       :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
       @click="$store.darkMode.toggle(icon.status)"
@@ -761,24 +865,27 @@
   </template>
 </div>
 
-            </footer>
+</footer>
+
           </div>
-        </section>
-        <section class="back">
+        </div>
+        <div class="back">
           <div class="container">
-            <div class="dream-grid">
+            
+            <div class="dream-grid dream-grid-about">
   
   
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">О себе</div>
 
         <div class="prose dark:prose-invert">
-          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru">sima-land.ru</a></p>
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru" target="_blank">sima-land.ru</a>
+</p>
 <p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
 код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
 <p>Еще у меня много разных хобби не связанных с ИТ.</p>
@@ -792,7 +899,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Фото</div>
@@ -807,7 +914,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Лицензия（Creative Commons）</div>
@@ -826,7 +933,7 @@
   
   <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
     <article
-      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
     >
       <div class="card-body">
         <div class="card-title">Социальные сети</div>
@@ -880,71 +987,86 @@
   
 
   
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2025 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
   
 </div>
 
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
           </div>
-        </section>
+        </div>
       </div>
     </div>
 
     <script>
   window.lightTheme = "emerald"
   window.darkTheme = "forest"
+</script>
 
-  window.hasTwitterEmbed =  null 
-  if (window.hasTwitterEmbed) {
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
     
-    window.twttr = (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {}
-      if (d.getElementById(id)) return t
-      js = d.createElement(s)
-      js.id = id
-      js.src = 'https://platform.twitter.com/widgets.js'
-      fjs.parentNode.insertBefore(js, fjs)
-
-      t._e = []
-      t.ready = function (f) {
-        t._e.push(f)
-      }
-
-      return t
-    })(document, 'script', 'twitter-wjs')
-  }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-<script src="/js/grid.js"></script>
-<script src="/js/main.js"></script>
-
-<script type="text/javascript" >
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(91794220, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-    });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/91794220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VN2SQ6G20F"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-VN2SQ6G20F');
-</script>
+  
+  <script src="/js/grid.min.js"></script>
 
 
 
+
+  
+
+<script src="/js/main.min.js"></script>
 
     
 
@@ -974,7 +1096,11 @@
 
     
 
-    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
   </body>
 </html>

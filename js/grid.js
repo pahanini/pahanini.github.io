@@ -5,16 +5,13 @@ function initGrid() {
     var msnry = new Masonry(grid, {
       itemSelector: '.dream-column'
     });
-    imagesLoaded(grid, function () {
-      return msnry.layout();
-    });
-    if (window.hasTwitterEmbed) {
-      window.twttr.ready(function (twttr) {
-        return twttr.events.bind('loaded', function () {
-          return msnry.layout();
-        });
-      });
+    if (grid.classList.contains('dream-grid-about')) {
+      window.aboutMasonry = msnry;
     }
+    imagesLoaded(grid, function () {
+      grid.style.opacity = 1;
+      msnry.layout();
+    });
   });
 }
 initGrid();
