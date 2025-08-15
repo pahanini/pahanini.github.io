@@ -1,24 +1,694 @@
-<!doctype html><html lang=ru-ru x-data :class=$store.darkMode.class() :data-theme=$store.darkMode.theme()><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75 | pahanini.com - записная книжка</title>
-<link href=/favicon.ico rel=icon type=image/x-icon><link rel=canonical href=http://localhost:1313/posts/golden-power-reomote-connect/><meta name=author content="pahanini"><meta name=description content="Пришлось заменить дистанционное управление на Golden Power EWB75..
-"><meta name=keywords content="Niva,Golden Power,Scheme"><meta name=generator content="Hugo 0.145.0"><meta property="og:url" content="http://localhost:1313/posts/golden-power-reomote-connect/"><meta property="og:site_name" content="pahanini.com - записная книжка"><meta property="og:title" content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75"><meta property="og:description" content="Пришлось заменить дистанционное управление на Golden Power EWB75.."><meta property="og:locale" content="ru_ru"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2024-09-07T13:37:24+05:00"><meta property="article:modified_time" content="2024-09-07T13:37:24+05:00"><meta property="article:tag" content="Niva"><meta property="article:tag" content="Golden Power"><meta property="article:tag" content="Scheme"><meta property="og:image" content="http://localhost:1313/me/background.jpg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost:1313/me/background.jpg"><meta name=twitter:title content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75"><meta name=twitter:description content="Пришлось заменить дистанционное управление на Golden Power EWB75.."><link rel=stylesheet href=/css/output.css><link rel=stylesheet data-custom-syntax-highlighting><style>.chroma{padding:1em;background-color:var(--dream-pre-bg,#f5f5f5);border-radius:.5em;overflow:auto}html.dark .chroma{background-color:var(--dream-pre-bg-dark,#262626)}</style><link rel=stylesheet href=/css/custom.css><script defer src=https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin=anonymous></script></head><body x-data="{
+<!DOCTYPE html>
+<html lang="ru-ru"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75 | pahanini.com - записная книжка</title>
+
+    
+  
+    <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://pahanini.com/posts/golden-power-reomote-connect/" />
+
+
+
+<meta name="author" content="pahanini" />
+<meta name="description" content="Пришлось заменить дистанционное управление на Golden Power EWB75.
+" />
+
+
+<meta name="keywords" content="Niva,Golden Power,Scheme">
+
+
+
+<meta name="generator" content="Hugo 0.145.0">
+
+
+<meta property="og:url" content="https://pahanini.com/posts/golden-power-reomote-connect/">
+  <meta property="og:site_name" content="pahanini.com - записная книжка">
+  <meta property="og:title" content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75">
+  <meta property="og:description" content="Пришлось заменить дистанционное управление на Golden Power EWB75.">
+  <meta property="og:locale" content="ru_ru">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-07T13:37:24+05:00">
+    <meta property="article:modified_time" content="2025-08-15T23:26:45+05:00">
+    <meta property="article:tag" content="Niva">
+    <meta property="article:tag" content="Golden Power">
+    <meta property="article:tag" content="Scheme">
+    <meta property="og:image" content="https://pahanini.com/me/background.jpg">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://pahanini.com/me/background.jpg">
+  <meta name="twitter:title" content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75">
+  <meta name="twitter:description" content="Пришлось заменить дистанционное управление на Golden Power EWB75.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" integrity="sha256-PtHu0lJIiSHfZeNj1nFd6wTX+Squ255SGZ/fc8seCtM=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
     flip: false,
-  }"><div id=dream-global-bg></div><nav x-data="{ isSticky: false }" x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })" class="sticky top-0 z-30 mt-4 lg:mt-8 py-4" :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }"><div class="container flex justify-between px-4"><section class="flex items-center gap-4"><div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title=Повернуть!><div class="h-10 rounded-full"><img src=/me/ava.jpg alt=pahanini></div></div><div><a href=http://localhost:1313/ class="text-lg font-semibold cursor-pointer">pahanini</a><div class="text-base-content/60 text-sm">Drink coffee. Do stupid things faster with more energy.</div></div></section><div class="dropdown dropdown-end sm:hidden"><div tabindex=0 role=button class="btn btn-ghost btn-square" aria-label="Select an option"><ion-icon name=menu class=text-2xl></ion-icon></div><ul tabindex=0 class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md"><li><div role=link tabindex=0 class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title><ion-icon name=information-circle></ion-icon></div></li><li><a class="group inline-flex items-center p-2 cursor-pointer" href=/search title=Поиск><ion-icon name=search></ion-icon>Поиск</a></li><li><a class="inline-flex items-center p-2 cursor-pointer" href=/index.xml title=RSS><ion-icon name=logo-rss></ion-icon>RSS</a></li><li><a class="inline-flex items-center p-2 cursor-pointer" href=/posts title=Архивы><ion-icon name=archive></ion-icon>Архивы</a></li><li><a class="inline-flex items-center p-2 cursor-pointer" href=/categories title="Все категории"><ion-icon name=grid></ion-icon>Все категории</a></li><li><a class="inline-flex items-center p-2 cursor-pointer" href=/tags title="Все теги"><ion-icon name=pricetags></ion-icon>Все теги</a></li></ul></div><section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4"><div role=link tabindex=0 class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title></div><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href=/search title=Поиск><ion-icon class=group-hover:text-primary-content name=search></ion-icon></a><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href=/index.xml title=RSS><ion-icon class=group-hover:text-primary-content name=logo-rss></ion-icon></a><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href=/posts title=Архивы><ion-icon class=group-hover:text-primary-content name=archive></ion-icon></a><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href=/categories title="Все категории"><ion-icon class=group-hover:text-primary-content name=grid></ion-icon></a><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href=/tags title="Все теги"><ion-icon class=group-hover:text-primary-content name=pricetags></ion-icon></a></section></div></nav><div class=flip-container :class="{ 'flip-it': flip }"><div class=flipper><div class=front><div class=container><div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4"><div class="hidden lg:block"></div><div class=lg:col-span-2><article class="mx-auto prose prose-quoteless dark:prose-invert" id=dream-single-post-main itemscope itemtype=http://schema.org/Article><meta itemprop=name content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75"><meta itemprop=description content="Пришлось заменить дистанционное управление на Golden Power EWB75.."><meta itemprop=datePublished content="2024-09-07T13:37:24+05:00"><meta itemprop=dateModified content="2024-09-07T13:37:24+05:00"><meta itemprop=wordCount content="46"><meta itemprop=image content="http://localhost:1313/me/background.jpg"><meta itemprop=keywords content="Niva,Golden Power,Scheme"><header><h1 itemprop=headline>Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75</h1><p class=text-sm><span data-format=luxon>2024-09-07T13:37:24+05:00</span>
-| <span>1 минута чтения</span>
-| <span>Обновлено
-<span data-format=luxon>2024-09-07T13:37:24+05:00</span></span></p><div class="flex justify-between"><div class="flex items-center"><span>@</span>
-<span><a href=https://t.me/pahanini target=_blank>pahanini</a></span></div><span class="flex items-center gap-2"><a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%d0%a1%d1%85%d0%b5%d0%bc%d0%b0%20%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%ba%d0%b8%d1%82%d0%b0%d0%b9%d1%81%d0%ba%d0%be%d0%b3%d0%be%20%d0%bf%d1%83%d0%bb%d1%8c%d1%82%d0%b0%20%d0%ba%20%d1%81%d0%be%d0%bb%d0%b5%d0%bd%d0%be%d0%b8%d0%b4%d0%b0%d0%bc%20%d0%bb%d0%b5%d0%b1%d0%b5%d0%b4%d0%ba%d0%b8%20Golden%20Power%20EWB75&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fgolden-power-reomote-connect%2f" title="Share on X"><ion-icon class=group-hover:text-primary-content name=logo-x></ion-icon></a><a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://vk.com/share.php?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fgolden-power-reomote-connect%2f" title="Поделиться ВК"><ion-icon class=group-hover:text-primary-content name=logo-vk></ion-icon></a></span></div></header><section id=dream-single-post-content itemprop=articleBody><img class="w-full z-30" src=river.jpg alt="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75"><p>Пришлось заменить дистанционное управление на Golden Power EWB75..</p><p>Схема подключения чтобы не забыть в следующий раз:</p><p><img src=golden_power_remote_connect.jpg alt=Схема></p><p>Если смотреть на лебедку так, что мотор будет справа. Провода от пульта подключаются к контактам блока слоеноидов слева
-на право:</p><ul><li>Желтый</li><li>Черный</li><li>Белый</li></ul><p>Красный от пульта идет на минус питания.</p></section></article></div><div x-data=tocHighlighter() @scroll.window=debouncedScroll class="hidden lg:flex lg:flex-col lg:items-end lg:self-start"></div></div><footer class="flex justify-between items-center gap-2 px-4 py-12"><div><p>© 2022 - 2025 pahanini.com - записная книжка</p><p class=text-sm>🌱
-<span class=text-base-content/60>Powered by <a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a> with theme
-<a class=hover:underline href=https://github.com/g1eny0ung/hugo-theme-dream target=_blank>Dream</a>.</span></p></div><div x-data="{ icons: [
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav x-data="{ isSticky: false }"
+  x-init="window.addEventListener('scroll', () => { isSticky = window.scrollY > 30 })"
+  class="sticky top-0 z-30 mt-4 lg:mt-8 py-4"
+  :class="{ 'bg-base-100 shadow-lg dark:border-b dark:border-base-content/30': isSticky }">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Повернуть!">
+        <div class="h-10 rounded-full">
+          <img src="/me/ava.jpg" alt="pahanini" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://pahanini.com/" class="text-lg font-semibold cursor-pointer">
+          pahanini
+        </a>
+        
+        
+        <div class="text-base-content/60 text-sm">Drink coffee. Do stupid things faster with more energy.</div>
+        
+      </div>
+      
+    </section>
+
+    
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="">
+    <ion-icon name="information-circle"></ion-icon></div>
+</li>
+
+
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Поиск">
+    <ion-icon name="search"></ion-icon>
+    Поиск
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/index.xml" title="RSS">
+    <ion-icon name="logo-rss"></ion-icon>
+    RSS
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Архивы">
+    <ion-icon name="archive"></ion-icon>
+    Архивы
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="Все категории">
+    <ion-icon name="grid"></ion-icon>
+    Все категории
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="Все теги">
+    <ion-icon name="pricetags"></ion-icon>
+    Все теги
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+
+
+
+<div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title=""></div>
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Поиск">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/index.xml" title="RSS">
+  <ion-icon class="group-hover:text-primary-content" name="logo-rss"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Архивы">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="Все категории">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="Все теги">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75">
+  <meta itemprop="description" content="Пришлось заменить дистанционное управление на Golden Power EWB75.">
+  <meta itemprop="datePublished" content="2024-09-07T13:37:24+05:00">
+  <meta itemprop="dateModified" content="2025-08-15T23:26:45+05:00">
+  <meta itemprop="wordCount" content="46">
+  <meta itemprop="image" content="https://pahanini.com/me/background.jpg">
+  <meta itemprop="keywords" content="Niva,Golden Power,Scheme">
+
+      <header>
+        <h1 itemprop="headline">Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2024-09-07T13:37:24&#43;05:00</span>
+          
+
+          | <span>1 минута чтения</span>
+
+          
+          | <span>Обновлено
+            
+              <span data-format="luxon">2025-08-15T23:26:45&#43;05:00</span>
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+    
+    <span>@</span>
+    
+
+    <span>
+
+
+  
+    
+       <a href="https://t.me/pahanini" target="_blank">pahanini</a>
+    
+  
+  </span>
+</div>
+
+          
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%d0%a1%d1%85%d0%b5%d0%bc%d0%b0%20%d0%bf%d0%be%d0%b4%d0%ba%d0%bb%d1%8e%d1%87%d0%b5%d0%bd%d0%b8%d1%8f%20%d0%ba%d0%b8%d1%82%d0%b0%d0%b9%d1%81%d0%ba%d0%be%d0%b3%d0%be%20%d0%bf%d1%83%d0%bb%d1%8c%d1%82%d0%b0%20%d0%ba%20%d1%81%d0%be%d0%bb%d0%b5%d0%bd%d0%be%d0%b8%d0%b4%d0%b0%d0%bc%20%d0%bb%d0%b5%d0%b1%d0%b5%d0%b4%d0%ba%d0%b8%20Golden%20Power%20EWB75&url=https%3a%2f%2fpahanini.com%2fposts%2fgolden-power-reomote-connect%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://vk.com/share.php?url=https%3a%2f%2fpahanini.com%2fposts%2fgolden-power-reomote-connect%2f" title="Поделиться ВК">
+    <ion-icon class="group-hover:text-primary-content" name="logo-vk"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="river.jpg" alt="Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75" />
+        
+
+        <p>Пришлось заменить дистанционное управление на Golden Power EWB75.</p>
+<p>Схема подключения чтобы не забыть в следующий раз:</p>
+<p><img src="golden_power_remote_connect.jpg" alt="Схема"></p>
+<p>Если смотреть на лебедку так, что мотор будет справа. Провода от пульта подключаются к контактам блока слоеноидов слева
+на право:</p>
+<ul>
+<li>Желтый</li>
+<li>Черный</li>
+<li>Белый</li>
+</ul>
+<p>Красный от пульта идет на минус питания.</p>
+
+        
+      </section>
+
+      
+
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end lg:self-start"
+  >
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2025 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
     { name: 'sunny', status: 'n' },
     { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
-  ] }" class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"><template x-for="icon in icons"><div role=button tabindex=0 :aria-label="'Select ' + icon.name + ' mode'" class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary" :class="$store.darkMode.icon() === icon.name && 'bg-primary'" @click=$store.darkMode.toggle(icon.status)><ion-icon :name="`${icon.name}-outline`" class=group-hover:text-primary-content :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"></ion-icon></div></template></div></footer></div></div><div class=back><div class=container><div class="dream-grid dream-grid-about"><div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column"><article class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"><div class=card-body><div class=card-title>О себе</div><div class="prose dark:prose-invert"><p>Меня зовут Павел. Работаю в <a href=https://www.sima-land.ru target=_blank>sima-land.ru</a></p><p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
-код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p><p>Еще у меня много разных хобби не связанных с ИТ.</p><p>Этот сайт я использую как записную книжку. Может
-эта информация будет полезна кому-то еще.</p></div></div></article></div><div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column"><article class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"><div class=card-body><div class=card-title>Фото</div><div class="prose dark:prose-invert"><p>Все фото на сайте мои и чаще никак не связаны с темой статьи.</p></div></div></article></div><div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column"><article class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"><div class=card-body><div class=card-title>Лицензия（Creative Commons）</div><div class="prose dark:prose-invert"><p>Контент сайта лицензирован <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-flex;align-items:center;gap:.25rem;text-decoration:underline>CC BY-NC-SA 4.0<img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt></a></p><p>All contents of this website are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target=_blank rel="license noopener noreferrer" style=display:inline-flex;align-items:center;gap:.25rem;text-decoration:underline>CC BY-NC-SA 4.0<img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt><img style=height:22px;margin-top:0;margin-bottom:0 src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt></a></p></div></div></article></div><div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column"><article class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"><div class=card-body><div class=card-title>Социальные сети</div><ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg"><li><a href=mailto:pahanini@gmail.com title=Email><ion-icon name=mail></ion-icon></a></li><li><a href=https://t.me/pahanini target=_blank title=Telegram><ion-icon src=/img/tg.svg></ion-icon></a></li><li><a href=https://github.com/pahanini target=_blank title=GitHub><ion-icon name=logo-github></ion-icon></a></li><li><a href=https://x.com/pahanini target=_blank title=X><ion-icon name=logo-x></ion-icon></a></li><li><a href=https://instagram.com/pahanini target=_blank title=Instagram><ion-icon name=logo-instagram></ion-icon></a></li><li><a href=https://stackoverflow.com/users/4695479/pavel-tetyaev target=_blank title="stack overflow"><ion-icon name=logo-stackoverflow></ion-icon></a></li></ul></div></article></div></div><footer class="flex justify-between items-center gap-2 px-4 py-12"><div><p>© 2022 - 2025 pahanini.com - записная книжка</p><p class=text-sm>🌱
-<span class=text-base-content/60>Powered by <a class=hover:underline href=https://gohugo.io/ target=_blank>Hugo</a> with theme
-<a class=hover:underline href=https://github.com/g1eny0ung/hugo-theme-dream target=_blank>Dream</a>.</span></p></div><div x-data="{ icons: [
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">О себе</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Меня зовут Павел. Работаю в <a href="https://www.sima-land.ru" target="_blank">sima-land.ru</a>
+</p>
+<p>Отвечаю за большую часть ИТ инфраструктуры. Умею писать
+код, руководить людьми. Разбираюсь во многих аспектах ИТ: программирование, управление, архитектура.</p>
+<p>Еще у меня много разных хобби не связанных с ИТ.</p>
+<p>Этот сайт я использую как записную книжку. Может
+эта информация будет полезна кому-то еще.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Фото</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Все фото на сайте мои и чаще никак не связаны с темой статьи.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Лицензия（Creative Commons）</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Контент сайта лицензирован <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p>All contents of this website are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.25rem; text-decoration: underline;">CC BY-NC-SA 4.0<img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px; margin-top: 0; margin-bottom: 0;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">Социальные сети</div>
+
+        <ul class="menu menu-horizontal flex-wrap w-full [&_ion-icon]:text-lg">
+  
+  <li>
+    <a href="mailto:pahanini@gmail.com" title="Email">
+      <ion-icon name="mail"></ion-icon>
+    </a>
+  </li>
+  
+
+  <li>
+    <a href="https://t.me/pahanini" target="_blank" title="Telegram">
+      <ion-icon src="/img/tg.svg"></ion-icon>
+    </a>
+  </li>
+
+  
+  <li>
+    <a href="https://github.com/pahanini" target="_blank" title="GitHub">
+      <ion-icon name="logo-github"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://x.com/pahanini" target="_blank" title="X">
+      <ion-icon name="logo-x"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://instagram.com/pahanini" target="_blank" title="Instagram">
+      <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://stackoverflow.com/users/4695479/pavel-tetyaev" target="_blank" title="stack overflow">
+      <ion-icon name="logo-stackoverflow"></ion-icon>
+    </a>
+  </li>
+  
+
+</ul>
+
+      </div>
+    </article>
+  </div>
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2022 - 2025 pahanini.com - записная книжка
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
     { name: 'sunny', status: 'n' },
     { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
-  ] }" class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"><template x-for="icon in icons"><div role=button tabindex=0 :aria-label="'Select ' + icon.name + ' mode'" class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary" :class="$store.darkMode.icon() === icon.name && 'bg-primary'" @click=$store.darkMode.toggle(icon.status)><ion-icon :name="`${icon.name}-outline`" class=group-hover:text-primary-content :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"></ion-icon></div></template></div></footer></div></div></div></div><script>window.lightTheme="emerald",window.darkTheme="forest"</script><script src=https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin=anonymous></script><script src=/js/grid.js></script><script src=/js/main.js></script><script src=https://cdn.jsdelivr.net/npm/luxon@1.26.0 integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0=" crossorigin=anonymous></script><script>format();function format(){document.querySelectorAll('span[data-format="luxon"]').forEach(e=>{const t=e.textContent;e.textContent=luxon.DateTime.fromISO(t,{locale:"ru"}).toFormat("yyyy.MM.dd")})}</script><script>window.customSyntaxHighlighting={light:"/css/syntax-light.min.css",dark:"/css/syntax-dark.min.css"},document.addEventListener("alpine:initialized",()=>{var e=Alpine.store("darkMode").isDark(),t=e?window.customSyntaxHighlighting.dark:window.customSyntaxHighlighting.light;document.querySelector("link[data-custom-syntax-highlighting]").setAttribute("href",t)})</script><script src=/js/toc.js></script><script type=module src=https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin=anonymous></script><script nomodule src=https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin=anonymous></script></body></html>
+  ] }"
+  class="flex items-center gap-2 h-[32px] px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
+  integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
+  crossorigin="anonymous"
+></script>
+<script>
+  format()
+
+  function format() {
+    document.querySelectorAll('span[data-format="luxon"]').forEach(el => {
+      const date = el.textContent
+
+      el.textContent = luxon.DateTime.fromISO(date, { locale: "ru" }).toFormat("yyyy.MM.dd")
+    })
+  }
+</script>
+
+
+
+<script>
+    window.customSyntaxHighlighting = {
+      light: "/css/syntax-light.min.css",
+      dark: "/css/syntax-dark.min.css"
+    }
+
+    document.addEventListener('alpine:initialized', () => {
+      var isDark = Alpine.store('darkMode').isDark()
+      var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+      document
+        .querySelector('link[data-custom-syntax-highlighting]')
+        .setAttribute('href', customSyntaxHighlightingUrl)
+    })
+  </script>
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

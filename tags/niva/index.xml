@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Niva on pahanini.com - записная книжка</title><link>http://localhost:1313/tags/niva/</link><description>Recent content in Niva on pahanini.com - записная книжка</description><generator>Hugo</generator><language>ru-ru</language><lastBuildDate>Sat, 07 Sep 2024 13:37:24 +0500</lastBuildDate><atom:link href="http://localhost:1313/tags/niva/index.xml" rel="self" type="application/rss+xml"/><item><title>Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75</title><link>http://localhost:1313/posts/golden-power-reomote-connect/</link><pubDate>Sat, 07 Sep 2024 13:37:24 +0500</pubDate><guid>http://localhost:1313/posts/golden-power-reomote-connect/</guid><description>&lt;p>Пришлось заменить дистанционное управление на Golden Power EWB75..&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Niva on pahanini.com - записная книжка</title>
+    <link>https://pahanini.com/tags/niva/</link>
+    <description>Recent content in Niva on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Fri, 15 Aug 2025 23:26:45 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/tags/niva/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Схема подключения китайского пульта к соленоидам лебедки Golden Power EWB75</title>
+      <link>https://pahanini.com/posts/golden-power-reomote-connect/</link>
+      <pubDate>Sat, 07 Sep 2024 13:37:24 +0500</pubDate>
+      <guid>https://pahanini.com/posts/golden-power-reomote-connect/</guid>
+      <description>&lt;p&gt;Пришлось заменить дистанционное управление на Golden Power EWB75.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
