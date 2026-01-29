@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MacOS on pahanini.com - записная книжка</title>
+    <title>Macos on pahanini.com - записная книжка</title>
     <link>https://pahanini.com/tags/macos/</link>
-    <description>Recent content in MacOS on pahanini.com - записная книжка</description>
+    <description>Recent content in Macos on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Fri, 19 Jul 2024 18:43:56 +0500</lastBuildDate>
+    <lastBuildDate>Thu, 29 Jan 2026 22:05:01 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/tags/macos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как навсегда удалить Microsoft AutoUpdate на Mac OS Sequoia</title>
+      <link>https://pahanini.com/posts/kill-permanently-microsoft-autoupdate-mac-os/</link>
+      <pubDate>Sun, 07 Dec 2025 10:21:19 +0500</pubDate>
+      <guid>https://pahanini.com/posts/kill-permanently-microsoft-autoupdate-mac-os/</guid>
+      <description>&lt;p&gt;Как избавиться от назойливого автообновления от Microsoft&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Как установить ntfs-3g на macOS Ventura</title>
       <link>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</link>

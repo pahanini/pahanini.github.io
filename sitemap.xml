@@ -2,23 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://pahanini.com/tags/exiftool/</loc>
-    <lastmod>2025-08-07T12:38:23+05:00</lastmod>
+    <loc>https://pahanini.com/categories/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/tags/macos/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/tags/microsoft/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/</loc>
-    <lastmod>2025-08-15T23:26:45+05:00</lastmod>
-  </url><url>
-    <loc>https://pahanini.com/tags/pdf/</loc>
-    <lastmod>2025-08-07T12:38:23+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/</loc>
-    <lastmod>2025-08-15T23:26:45+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/posts/kill-permanently-microsoft-autoupdate-mac-os/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/categories/%D0%BA%D0%B0%D0%BA/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/tags/exiftool/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
+  </url><url>
+    <loc>https://pahanini.com/tags/pdf/</loc>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/posts/change-pdf-modify-date/</loc>
-    <lastmod>2025-08-07T12:38:23+05:00</lastmod>
-  </url><url>
-    <loc>https://pahanini.com/categories/</loc>
-    <lastmod>2025-08-15T23:26:45+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/golden-power/</loc>
     <lastmod>2025-08-15T23:26:45+05:00</lastmod>
@@ -78,19 +90,13 @@
     <lastmod>2024-07-20T13:48:37+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/keenetic/</loc>
-    <lastmod>2024-07-19T18:43:56+05:00</lastmod>
-  </url><url>
-    <loc>https://pahanini.com/tags/macos/</loc>
-    <lastmod>2024-07-19T18:43:56+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/ntfs/</loc>
-    <lastmod>2024-07-19T18:43:56+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/posts/install-ntfs-mac-os-ventura/</loc>
-    <lastmod>2024-07-19T18:43:56+05:00</lastmod>
-  </url><url>
-    <loc>https://pahanini.com/categories/%D1%82%D1%80%D0%B0%D0%B1%D0%BB%D1%8B/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/esb/</loc>
     <lastmod>2024-07-26T10:06:58+05:00</lastmod>
@@ -111,19 +117,19 @@
     <lastmod>2024-07-19T18:43:56+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/cc2531/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/cctool/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/mqtt/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/tags/zigbee/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/posts/zigbee-flashing-cc2531/</loc>
-    <lastmod>2024-07-20T13:48:37+05:00</lastmod>
+    <lastmod>2026-01-29T22:05:01+05:00</lastmod>
   </url><url>
     <loc>https://pahanini.com/search/</loc>
     <lastmod>2024-07-19T18:43:56+05:00</lastmod>
