@@ -6,8 +6,15 @@
     <description>Recent content in Как? on pahanini.com - записная книжка</description>
     <generator>Hugo</generator>
     <language>ru-ru</language>
-    <lastBuildDate>Thu, 29 Jan 2026 22:05:01 +0500</lastBuildDate>
+    <lastBuildDate>Thu, 05 Mar 2026 21:53:54 +0500</lastBuildDate>
     <atom:link href="https://pahanini.com/categories/%D0%BA%D0%B0%D0%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как не задолбаться при клонировании репозиториев</title>
+      <link>https://pahanini.com/posts/gitz-extention-for-git/</link>
+      <pubDate>Thu, 05 Mar 2026 21:14:28 +0500</pubDate>
+      <guid>https://pahanini.com/posts/gitz-extention-for-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pahanini/gitz&#34; target=&#34;_blank&#34;&gt;Gitz&lt;/a&gt;&#xA; обёртка над git для автоматизации операций mkdir &amp;amp; git clone&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Как навсегда удалить Microsoft AutoUpdate на Mac OS Sequoia</title>
       <link>https://pahanini.com/posts/kill-permanently-microsoft-autoupdate-mac-os/</link>

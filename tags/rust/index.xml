@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on pahanini.com - записная книжка</title>
+    <link>https://pahanini.com/tags/rust/</link>
+    <description>Recent content in Rust on pahanini.com - записная книжка</description>
+    <generator>Hugo</generator>
+    <language>ru-ru</language>
+    <lastBuildDate>Thu, 05 Mar 2026 21:53:54 +0500</lastBuildDate>
+    <atom:link href="https://pahanini.com/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как не задолбаться при клонировании репозиториев</title>
+      <link>https://pahanini.com/posts/gitz-extention-for-git/</link>
+      <pubDate>Thu, 05 Mar 2026 21:14:28 +0500</pubDate>
+      <guid>https://pahanini.com/posts/gitz-extention-for-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pahanini/gitz&#34; target=&#34;_blank&#34;&gt;Gitz&lt;/a&gt;&#xA; обёртка над git для автоматизации операций mkdir &amp;amp; git clone&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

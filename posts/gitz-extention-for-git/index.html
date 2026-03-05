@@ -6,7 +6,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom | pahanini.com - записная книжка</title>
+    <title>Как не задолбаться при клонировании репозиториев | pahanini.com - записная книжка</title>
 
     
   
@@ -14,24 +14,33 @@
   
 
 
-<link rel="canonical" href="https://pahanini.com/tags/zoom/" />
+<link rel="canonical" href="https://pahanini.com/posts/gitz-extention-for-git/" />
 
 
 
 <meta name="author" content="pahanini" />
-<meta name="description" content="Записная книжка" />
+<meta name="description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone
+" />
+
+
+<meta name="keywords" content="Git,Rust">
 
 
 
 <meta name="generator" content="Hugo 0.145.0">
 
 
-<meta property="og:url" content="https://pahanini.com/tags/zoom/">
+<meta property="og:url" content="https://pahanini.com/posts/gitz-extention-for-git/">
   <meta property="og:site_name" content="pahanini.com - записная книжка">
-  <meta property="og:title" content="Zoom">
-  <meta property="og:description" content="Записная книжка">
+  <meta property="og:title" content="Как не задолбаться при клонировании репозиториев">
+  <meta property="og:description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone">
   <meta property="og:locale" content="ru_ru">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-05T21:14:28+05:00">
+    <meta property="article:modified_time" content="2026-03-05T21:53:54+05:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Rust">
     <meta property="og:image" content="https://pahanini.com/me/background.jpg">
 
 
@@ -39,8 +48,8 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://pahanini.com/me/background.jpg">
-  <meta name="twitter:title" content="Zoom">
-  <meta name="twitter:description" content="Записная книжка">
+  <meta name="twitter:title" content="Как не задолбаться при клонировании репозиториев">
+  <meta name="twitter:description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone">
 
 
 
@@ -52,7 +61,30 @@
 
 
 
-     
+    
+
+
+<link rel="stylesheet" data-custom-syntax-highlighting />
+<style>
+  .chroma {
+    padding: 1em;
+    background-color: var(--dream-pre-bg, #f5f5f5);
+    border-radius: .5em;
+    overflow: auto;
+  }
+
+  html.dark .chroma {
+    background-color: var(--dream-pre-bg-dark, #262626);
+  }
+</style>
+
+
+
+
+
+
+
+
 
     
     <link rel="stylesheet" href="/css/custom.css" />
@@ -243,203 +275,43 @@
         <div class="front">
           <div class="container">
             
-
-
-<div class="flex flex-col md:flex-row mt-4">
-
-  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
-    <h1 class="text-2xl">Zoom</h1>
-    <p class="text-sm">1 статья</p>
-    <div class="flex flex-wrap gap-4 mt-6">
-      
-
-      
-      
-      <a href="/tags/cc2531/" class="badge h-6 no-underline hover:badge-primary">
-        CC2531
-      </a>
-      
-      
-      
-      <a href="/tags/cctool/" class="badge h-6 no-underline hover:badge-primary">
-        Cctool
-      </a>
-      
-      
-      
-      <a href="/tags/context/" class="badge h-6 no-underline hover:badge-primary">
-        Context
-      </a>
-      
-      
-      
-      <a href="/tags/ddd/" class="badge h-6 no-underline hover:badge-primary">
-        DDD
-      </a>
-      
-      
-      
-      <a href="/tags/esb/" class="badge h-6 no-underline hover:badge-primary">
-        ESB
-      </a>
-      
-      
-      
-      <a href="/tags/exiftool/" class="badge h-6 no-underline hover:badge-primary">
-        Exiftool
-      </a>
-      
-      
-      
-      <a href="/tags/git/" class="badge h-6 no-underline hover:badge-primary">
-        Git
-      </a>
-      
-      
-      
-      <a href="/tags/golang/" class="badge h-6 no-underline hover:badge-primary">
-        Golang
-      </a>
-      
-      
-      
-      <a href="/tags/golden-power/" class="badge h-6 no-underline hover:badge-primary">
-        Golden Power
-      </a>
-      
-      
-      
-      <a href="/tags/grpc/" class="badge h-6 no-underline hover:badge-primary">
-        GRPC
-      </a>
-      
-      
-      
-      <a href="/tags/imcs/" class="badge h-6 no-underline hover:badge-primary">
-        IMCS
-      </a>
-      
-      
-      
-      <a href="/tags/keenetic/" class="badge h-6 no-underline hover:badge-primary">
-        Keenetic
-      </a>
-      
-      
-      
-      <a href="/tags/macos/" class="badge h-6 no-underline hover:badge-primary">
-        Macos
-      </a>
-      
-      
-      
-      <a href="/tags/microsoft/" class="badge h-6 no-underline hover:badge-primary">
-        Microsoft
-      </a>
-      
-      
-      
-      <a href="/tags/mqtt/" class="badge h-6 no-underline hover:badge-primary">
-        Mqtt
-      </a>
-      
-      
-      
-      <a href="/tags/niva/" class="badge h-6 no-underline hover:badge-primary">
-        Niva
-      </a>
-      
-      
-      
-      <a href="/tags/ntfs/" class="badge h-6 no-underline hover:badge-primary">
-        NTFS
-      </a>
-      
-      
-      
-      <a href="/tags/pdf/" class="badge h-6 no-underline hover:badge-primary">
-        Pdf
-      </a>
-      
-      
-      
-      <a href="/tags/python/" class="badge h-6 no-underline hover:badge-primary">
-        Python
-      </a>
-      
-      
-      
-      <a href="/tags/rest/" class="badge h-6 no-underline hover:badge-primary">
-        REST
-      </a>
-      
-      
-      
-      <a href="/tags/rust/" class="badge h-6 no-underline hover:badge-primary">
-        Rust
-      </a>
-      
-      
-      
-      <a href="/tags/scheme/" class="badge h-6 no-underline hover:badge-primary">
-        Scheme
-      </a>
-      
-      
-      
-      <a href="/tags/zigbee/" class="badge h-6 no-underline hover:badge-primary">
-        ZigBee
-      </a>
-      
-      
-      
-      <span class="badge h-6 badge-primary">
-        Zoom
-      </span>
-      
-      
-    </div>
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
   </div>
-  
-  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
-  
-  <div class="flex-1">
-    
 
-    
-      <div class="dream-grid">
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Как не задолбаться при клонировании репозиториев">
+  <meta itemprop="description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone">
+  <meta itemprop="datePublished" content="2026-03-05T21:14:28+05:00">
+  <meta itemprop="dateModified" content="2026-03-05T21:53:54+05:00">
+  <meta itemprop="wordCount" content="177">
+  <meta itemprop="image" content="https://pahanini.com/me/background.jpg">
+  <meta itemprop="keywords" content="Git,Rust">
+
+      <header>
+        <h1 itemprop="headline">Как не задолбаться при клонировании репозиториев</h1>
+        <p class="text-sm">
+          
+            <span data-format="luxon">2026-03-05T21:14:28&#43;05:00</span>
+          
+
+          | <span>1 минута чтения</span>
+
+          
+          | <span>Обновлено
+            
+              <span data-format="luxon">2026-03-05T21:53:54&#43;05:00</span>
+            </span>
+          
+        </p>
+
         
-          <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
-            <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/zoom-bingo/">
-  
-  <figure>
-    
-    
-      
-      <picture>
-        <source srcset="/posts/zoom-bingo/brugge_hu_7093774602d80b79.webp" type="image/webp" />
-        <img src="/posts/zoom-bingo/brugge.jpg" alt="brugge.jpg" />
-      </picture>
-    
-    
-  </figure>
-  
-
-  <div class="card-body">
-    <h2 class="card-title">Zoom Bingo</h2>
-
-    <p class="date text-base-content/60">
-    
-      <span data-format="luxon">2024-07-19T11:23:54&#43;05:00</span>
-    
-    </p>
-
-    <p>Как развлечь себя на скучной рекламной встрече в зум.</p>
-
-    
-    <div class="card-actions justify-between items-center mt-4">
-      
-        <div class="flex items-center">
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
     
     <span>@</span>
     
@@ -449,31 +321,83 @@
 
   
     
-      pahanini
+       <a href="https://t.me/pahanini" target="_blank">pahanini</a>
     
   
   </span>
 </div>
 
+          
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=%d0%9a%d0%b0%d0%ba%20%d0%bd%d0%b5%20%d0%b7%d0%b0%d0%b4%d0%be%d0%bb%d0%b1%d0%b0%d1%82%d1%8c%d1%81%d1%8f%20%d0%bf%d1%80%d0%b8%20%d0%ba%d0%bb%d0%be%d0%bd%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b8%20%d1%80%d0%b5%d0%bf%d0%be%d0%b7%d0%b8%d1%82%d0%be%d1%80%d0%b8%d0%b5%d0%b2&url=https%3a%2f%2fpahanini.com%2fposts%2fgitz-extention-for-git%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://vk.com/share.php?url=https%3a%2f%2fpahanini.com%2fposts%2fgitz-extention-for-git%2f" title="Поделиться ВК">
+    <ion-icon class="group-hover:text-primary-content" name="logo-vk"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+          <img class="w-full z-30" src="2106.jpeg" alt="Как не задолбаться при клонировании репозиториев" />
+        
+
+        <p><a href="https://github.com/pahanini/gitz" target="_blank">Gitz</a>
+ обёртка над git для автоматизации операций mkdir &amp; git clone</p>
+<p>Мне надоело тратить время на создание папок, изучая очередной репозиторий на github, gitlab и так далее,
+а лазить по коду в браузере, то еще удовольствие.</p>
+<p>Чтобы не запутаться в папках я храню код в структуре типа:</p>
+<pre tabindex="0"><code>~/Projects/
+  github.com/
+    owner/
+      epo/
+  gitlab.com/
+    another_owner/
+      another_repo/
+  git.corp.example.com/
+    team/
+      project/
+</code></pre><p>Так можно быстро найти нужный проект.</p>
+<p>Каждый раз, когда нужно склонировать репозиторий делаем <code>mkdir</code> + <code>git clone</code>.
+Для одного хостинга это терпимо. Но работая одновременно с GitHub, GitLab и
+корпоративным сервером — это превращается в рутину.</p>
+<p>Сделал <a href="https://github.com/pahanini/gitz" target="_blank">обертку</a>
+ над git, которая автоматизирует эту рутину.</p>
+<p><code>gitz load</code> берёт URL репозитория и сама создаёт нужную структуру директорий:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz load https://github.com/pahanini/gitz
+</span></span><span class="line"><span class="cl"><span class="c1"># создаст ~/Projects/github.com/pahanini/gitz и склонирует туда</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz load git@gitlab.com:myorg/myrepo.git
+</span></span><span class="line"><span class="cl"><span class="c1"># создаст ~/Projects/gitlab.com/myorg/myrepo и склонирует туда</span>
+</span></span></code></pre></div><p>Домен, организация, путь — всё определяется автоматически из URL.</p>
+<p>Базовая директория — <code>~/Projects</code>. Если нужно другое место, задайте переменную окружения GITZ_HOME.</p>
+<p>Все остальные команды gitz передаёт в git без изменений — используйте как обычный git.</p>
+<p>Установка:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">brew tap pahanini/gitz
+</span></span><span class="line"><span class="cl">brew install gitz
+</span></span></code></pre></div><p>Исходный код и документация: <a href="https://github.com/pahanini/gitz" target="_blank">https://github.com/pahanini/gitz</a>
+</p>
+
+        
+      </section>
+
       
 
-      <div class="flex items-center">
-        <ion-icon name="time" class="mr-1"></ion-icon>
-        <span>1 минута чтения</span>
-      </div>
-    </div>
+      
+    </article>
   </div>
-</a>
 
-          </div>
-        
-      </div>
-    
-
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end lg:self-start"
+  >
     
   </div>
 </div>
-
 
 
             
@@ -730,7 +654,7 @@
     
 
 
-<script
+  <script
   src="https://cdn.jsdelivr.net/npm/luxon@1.26.0"
   integrity="sha256-4sbTzmCCW9LGrIh5OsN8V5Pfdad1F1MwhLAOyXKnsE0="
   crossorigin="anonymous"
@@ -746,6 +670,33 @@
     })
   }
 </script>
+
+
+
+<script>
+    window.customSyntaxHighlighting = {
+      light: "/css/syntax-light.min.css",
+      dark: "/css/syntax-dark.min.css"
+    }
+
+    document.addEventListener('alpine:initialized', () => {
+      var isDark = Alpine.store('darkMode').isDark()
+      var customSyntaxHighlightingUrl = isDark ? window.customSyntaxHighlighting.dark : window.customSyntaxHighlighting.light
+
+      document
+        .querySelector('link[data-custom-syntax-highlighting]')
+        .setAttribute('href', customSyntaxHighlightingUrl)
+    })
+  </script>
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
 
 
 

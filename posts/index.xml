@@ -8,6 +8,13 @@
     <language>ru-ru</language>
     <atom:link href="https://pahanini.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Как не задолбаться при клонировании репозиториев</title>
+      <link>https://pahanini.com/posts/gitz-extention-for-git/</link>
+      <pubDate>Thu, 05 Mar 2026 21:14:28 +0500</pubDate>
+      <guid>https://pahanini.com/posts/gitz-extention-for-git/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/pahanini/gitz&#34; target=&#34;_blank&#34;&gt;Gitz&lt;/a&gt;&#xA; обёртка над git для автоматизации операций mkdir &amp;amp; git clone&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Как навсегда удалить Microsoft AutoUpdate на Mac OS Sequoia</title>
       <link>https://pahanini.com/posts/kill-permanently-microsoft-autoupdate-mac-os/</link>
       <pubDate>Sun, 07 Dec 2025 10:21:19 +0500</pubDate>
