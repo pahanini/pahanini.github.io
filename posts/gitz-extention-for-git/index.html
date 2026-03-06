@@ -38,7 +38,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-03-05T21:14:28+05:00">
-    <meta property="article:modified_time" content="2026-03-05T22:01:02+05:00">
+    <meta property="article:modified_time" content="2026-03-06T09:50:29+05:00">
     <meta property="article:tag" content="Git">
     <meta property="article:tag" content="Rust">
     <meta property="og:image" content="https://pahanini.com/me/background.jpg">
@@ -286,7 +286,7 @@
   <meta itemprop="name" content="Как не задолбаться при клонировании репозиториев">
   <meta itemprop="description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone">
   <meta itemprop="datePublished" content="2026-03-05T21:14:28+05:00">
-  <meta itemprop="dateModified" content="2026-03-05T22:01:02+05:00">
+  <meta itemprop="dateModified" content="2026-03-06T09:50:29+05:00">
   <meta itemprop="wordCount" content="182">
   <meta itemprop="image" content="https://pahanini.com/me/background.jpg">
   <meta itemprop="keywords" content="Git,Rust">
@@ -303,7 +303,7 @@
           
           | <span>Обновлено
             
-              <span data-format="luxon">2026-03-05T22:01:02&#43;05:00</span>
+              <span data-format="luxon">2026-03-06T09:50:29&#43;05:00</span>
             </span>
           
         </p>
@@ -368,9 +368,9 @@
 <p>Сделал <a href="https://github.com/pahanini/gitz" target="_blank">обертку</a>
  над git, которая автоматизирует эту рутину.</p>
 <p><code>gitz load</code> берёт URL репозитория и сама создаёт нужную структуру директорий:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz load https://github.com/pahanini/gitz
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz create https://github.com/pahanini/gitz
 </span></span><span class="line"><span class="cl"><span class="c1"># создаст ~/Projects/github.com/pahanini/gitz и склонирует туда</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz load git@gitlab.com:myorg/myrepo.git
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">gitz create git@gitlab.com:myorg/myrepo.git
 </span></span><span class="line"><span class="cl"><span class="c1"># создаст ~/Projects/gitlab.com/myorg/myrepo и склонирует туда</span>
 </span></span></code></pre></div><p>Домен, организация, путь — всё определяется автоматически из URL.</p>
 <p>Базовая директория — <code>~/Projects</code>. Если нужно другое место, задайте переменную окружения GITZ_HOME.</p>
