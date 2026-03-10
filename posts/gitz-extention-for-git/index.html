@@ -38,7 +38,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-03-05T21:14:28+05:00">
-    <meta property="article:modified_time" content="2026-03-06T09:50:29+05:00">
+    <meta property="article:modified_time" content="2026-03-10T22:34:41+05:00">
     <meta property="article:tag" content="Git">
     <meta property="article:tag" content="Rust">
     <meta property="og:image" content="https://pahanini.com/me/background.jpg">
@@ -286,8 +286,8 @@
   <meta itemprop="name" content="Как не задолбаться при клонировании репозиториев">
   <meta itemprop="description" content="Gitz обёртка над git для автоматизации операций mkdir &amp; git clone">
   <meta itemprop="datePublished" content="2026-03-05T21:14:28+05:00">
-  <meta itemprop="dateModified" content="2026-03-06T09:50:29+05:00">
-  <meta itemprop="wordCount" content="182">
+  <meta itemprop="dateModified" content="2026-03-10T22:34:41+05:00">
+  <meta itemprop="wordCount" content="176">
   <meta itemprop="image" content="https://pahanini.com/me/background.jpg">
   <meta itemprop="keywords" content="Git,Rust">
 
@@ -303,7 +303,7 @@
           
           | <span>Обновлено
             
-              <span data-format="luxon">2026-03-06T09:50:29&#43;05:00</span>
+              <span data-format="luxon">2026-03-10T22:34:41&#43;05:00</span>
             </span>
           
         </p>
@@ -354,15 +354,14 @@
 <pre tabindex="0"><code>~/Projects/
   github.com/
     owner/
-      epo/
+      repo/
   gitlab.com/
     another_owner/
       another_repo/
   git.corp.example.com/
     team/
       project/
-</code></pre><p>Так можно быстро найти нужный проект.</p>
-<p>Каждый раз, когда нужно склонировать репозиторий делаем <code>mkdir</code> + <code>git clone</code>.
+</code></pre><p>Каждый раз, когда нужно склонировать репозиторий делаем <code>mkdir</code> + <code>git clone</code>.<br>
 Для одного хостинга это терпимо. Но работая одновременно с GitHub, GitLab и
 корпоративным сервером — это превращается в рутину.</p>
 <p>Сделал <a href="https://github.com/pahanini/gitz" target="_blank">обертку</a>
